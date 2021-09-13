@@ -1,0 +1,51 @@
+.container.sobre{
+
+    background-color: transparent;
+    height: 80vh;
+    width: 45%;
+    margin: auto;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 80px;
+    
+    
+
+}
+
+.content-sobre{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    height: 95%;
+
+    width: 85%;
+    padding: 50px ;
+
+    background-image: linear-gradient(to bottom, rgb(81, 202, 206) , rgb(65, 173, 177));
+    border-radius: 20px;
+}
+
+.content-sobre h2{
+
+    font-size: 50px;
+    color: rgb(255, 255, 255);
+
+
+    margin-bottom: 80px;
+    background-color: transparent;
+
+}
+
+.content-sobre p{
+
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+    background-color: transparent;
+
+}

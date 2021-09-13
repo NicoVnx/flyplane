@@ -1,0 +1,64 @@
+.container.home{
+
+    background-color: transparent;
+    height: 80vh;
+    width: 45%;
+    margin: auto;
+    
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    flex-direction: column;
+
+    padding: 80px;
+    
+}
+
+.content-home{
+
+    background-color: transparent;
+
+}
+
+p, h2, a {
+
+    background-color: transparent;
+
+}
+
+.content-home h2{
+
+    font-size: 70px;
+    background-color: transparent;
+
+}
+
+#title-home{
+
+    display: flex;
+    height: 180px;
+    background-color: transparent;
+   
+}
+
+h2.fly-txt{
+
+    color: rgb(41, 91, 255);
+
+}
+
+h2.fly-esp{
+
+    color: transparent;
+
+}
+
+.content-home p{
+
+    color: rgb(131, 131, 131);
+    font-size: 17px;
+    font-weight: 400;
+
+}
+

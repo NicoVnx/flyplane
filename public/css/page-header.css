@@ -1,0 +1,138 @@
+body{
+
+    background-color: transparent;
+
+}
+
+header{
+
+    max-width: 100%;
+    height: 70px;
+    background-color: transparent ;
+    margin-top: 0px;
+
+}
+
+.container{
+
+    background-color: transparent;
+    height: 75px;
+    width: 45%;
+    margin: auto;
+
+}
+
+nav#header{
+
+    width: 70%;
+    max-height: 100%;
+    background-color: transparent;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+ul {
+    
+    max-width: 100%;
+    max-height: 100%;
+    padding: 10px;
+    list-style: none;
+    background-color: transparent;
+    margin-top: 20px;
+    display: inline-flex;
+    
+
+}
+
+#header ul li{
+
+    background-color: transparent;
+    padding: 5px;
+    border-radius: 3px;
+    
+
+}
+
+#header ul li a{
+
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 17px;
+    position: absolute;
+}
+
+#header ul li a i{
+
+    background-color: transparent;
+    
+
+}
+
+ul#ulpai{
+
+    align-items: center;
+    
+
+}
+
+ul#ulfilha{
+
+    align-items: center;
+    display: flex;
+
+}
+
+ul#ulfilha li{
+
+    margin-right: 100px;
+    text-decoration: none;
+
+}
+
+#header ul li a:hover{
+
+   font-size: 18px;
+
+    text-shadow: 0px 6px 8px rgba(0, 0, 0, 0.144);
+   transition: 0.25s;
+
+}
+
+#header ul #imp li  a{
+
+    color: white;
+
+}
+
+#imp a{
+
+    padding: 13px 16px;
+    background-color: rgb(41, 91, 255);
+    border-radius: 7px;
+    margin-top: -13px;
+
+}
+
+#imp a:hover{
+
+    transition: 0.25s;
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.103);
+
+}
+
+/*#header ul li a::after {
+    
+    content: '';
+    display: block;
+    width: 100%;
+    height: 0px;
+    background: rgb(0, 0, 0);
+    transition: 0.1s;
+}
+#header ul li a:hover::after {
+    
+    height: 3px;
+    transition: 0.1s;
+}
