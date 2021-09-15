@@ -1,7 +1,11 @@
-window.addEventListener("onmouseover", function(){
+document.addEventListener("DOMContentLoaded", function () {
+    const card = document.querySelector(".card")
+const cardc = document.querySelector(".cont-card")
 
-    const cardc = document.querySelector(".card")
-    const card = document.querySelector(".cont-card")
-    card.classList.add("hide", onmouseover(cardc))
-
-})
+    card.addEventListener("mouseover", function (event) {
+      cardc.classList.remove("hide")
+    });
+    card.addEventListener("mouseleave", function (event) {
+        cardc.classList.add("hide")
+      });
+});
