@@ -55,7 +55,9 @@ body{
     height: 100%;
     padding: 50px 100px;
     margin-top: 50px;
-    background-color: rgba(191, 206, 255, 12%);
+    background-color: rgb(241, 243, 255);
+
+    border-radius: 5px;
     
 
 }
