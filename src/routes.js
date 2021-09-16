@@ -6,5 +6,6 @@ const views = __dirname + "/views/"
 
   routes.get("/contato", (req, res) => res.render(views + "contato", {}))
   routes.get("/sobre", (req, res) => res.render(views + "sobre", {}))
+  routes.get("/destinos", (req, res) => res.render(views + "destinos", {}))
 
 module.exports = routes;

@@ -1,16 +1,15 @@
 .container.sobre{
 
-    background-color: transparent;
+    
     height: 80vh;
     width: 45%;
-    margin: auto;
+    margin-bottom: 120px;
     
     display: flex;
     align-items: center;
     justify-content: center;
 
-    padding: 80px;
-    
+    padding: 180px 0 0 0;
     
 
 }
@@ -27,14 +26,15 @@
     width: 85%;
     padding: 50px ;
 
-    background-image: linear-gradient(to bottom, rgb(81, 202, 206) , rgb(65, 173, 177));
+    background-image: linear-gradient(to bottom, rgb(229, 233, 252) , rgb(228, 232, 248));
     border-radius: 20px;
+    box-shadow: 6px 6px 18px rgba(0, 0, 0, 0.199);
 }
 
 .content-sobre h2{
 
     font-size: 50px;
-    color: rgb(255, 255, 255);
+    color: rgb(79, 1, 224);
 
 
     margin-bottom: 80px;
@@ -44,7 +44,7 @@
 
 .content-sobre p{
 
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     font-size: 30px;
     background-color: transparent;
 

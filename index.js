@@ -1,6 +1,6 @@
 const express = require("express")
 const server = express()
-const admin = require("./src/routes-adm")
+//const admin = require("./src/routes-adm")
 const routes = require("./src/routes")
 const session = require("express-session")
 
@@ -34,5 +34,5 @@ server.set("view engine", "ejs")
 
 
 server.use(routes)
-server.use('/admin', admin)
+//server.use('/admin', admin)
 server.listen(3000, () => console.log("Server Rodando!"))

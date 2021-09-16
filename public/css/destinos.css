@@ -1,0 +1,135 @@
+body{
+
+    height: 120vw;
+
+}
+
+.container.dest{
+
+    height: 100%;
+    width: 55%;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 180px 80px 80px 80px;
+    
+}
+
+.main-dest{
+
+    width: 100%;
+
+}
+
+.main-dest h2{
+
+    font-size: 70px;
+
+}
+
+.main-dest p.sub{
+
+    color: rgb(131, 131, 131);
+    font-size: 17px;
+    font-weight: 400;
+
+}
+
+#title-dest{
+
+    display: flex;
+    height: 180px;
+   
+}
+
+#title-dest h2 {
+    width: 100%;
+    height: 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(to right, rgb(0, 185, 176), rgb(0, 155, 147) );
+}
+
+.destinos{
+
+    width: 100%;
+    height: 100%;
+    padding: 50px 100px;
+    margin-top: 50px;
+    background-color: rgba(191, 206, 255, 12%);
+    
+
+}
+
+.lista{
+
+    list-style-type: none;
+    margin: 100px 0 0 0;
+    padding: 0;
+
+}
+
+.lista li{
+
+    box-shadow: 6px 6px 18px rgba(0, 0, 0, 0.199);
+
+    background-image: linear-gradient(to bottom, rgb(236, 238, 252) , rgb(231, 234, 247));
+
+    height: 90px;
+    margin-bottom: 50px;
+
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.img{
+
+    width: 30%;
+    height: 100%;
+    
+
+}
+
+.img img{
+
+    width: 100%;
+    height: 100%;
+    border-radius: 0px 18px 18px 0px;
+
+}
+
+.star{
+
+    height: 100%;
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(to right, rgb(243, 208, 7), rgb(248, 213, 17) );
+
+}
+
+.card p{
+
+    height: 100%;
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
+
+}
+
+.card{
+
+    padding-right: 80px;
+
+}
