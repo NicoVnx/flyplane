@@ -36,6 +36,15 @@ header ul{
     align-items: center;
 }
 
+ul#ulpai p{
+
+    margin-top: 40px;
+    margin-left: 250px;
+
+    
+
+}
+
 ul#ulfilha{
 
     display: flex;
