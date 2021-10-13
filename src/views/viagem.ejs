@@ -1,5 +1,5 @@
 <%- include('parts/page-head', { title : 'Contato', linkCSS : 'css/contato.css', linkCSS2 : '', linkCSS3 : ''}) %>
-
+<script src="script/cookieValida.js"></script>
 <body>
     
     <!--Header-->
@@ -9,15 +9,180 @@
 
     <!--Header-->
 
-    <div class="container quest">
-<form action="/viagem" method="post">
-
+    <div class="container viagem">
+<% if(valida == 0 || valida == 1){ %>        
+<form action="/viagemEmail" method="post">
+    
+    <div class="cont email">
         <h3>Para continuar digite aqui o seu email: </h3>
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email">
-        <button type="submit">Confirmar</button>
 
+        <% if(valida == 1){%>
+
+            <p><%=erro%></p>
+            <% console.log('erro')}
+
+            else if(valida == 2){ %>
+
+                <p><%=sucesso %></p>
+                <% console.log('sucesso')} %>
+                  
+
+        <label for="email">Email</label>
+        <input type="text" id="email" name="email">
+        <button type="submit">Confirmar</button>
+    </div>
+    <%} else{%>
+
+        
+        
+        <%}%>
 </form>
+
+   <% if(valida == 2 || valida == 3){ %>
+    <form action="/viagemQuest" method="post">
+
+        <div class="cont quest">
+    <%if(valida == 3){%><%= erroPerfil %><%}%>
+        <p>???</p>
+        <input type="radio" name="one" value="praia">aaa
+        <input type="radio" name="one" value="hist">bbb
+        <input type="radio" name="one" value="mont">ccc
+        <input type="radio" name="one" value="desc">ddd
+<br/>
+        <p>???</p>
+        <input type="radio" name="two"value="mont">aaa
+        <input type="radio" name="two" value="praia">bbb
+        <input type="radio" name="two"value="desc">ccc
+        <input type="radio" name="two" value="hist">ddd
+<br/>
+        <p>???</p>
+        <input type="radio" name="three" value="hist">aaa
+        <input type="radio" name="three"value="desc">bbb
+        <input type="radio" name="three" value="mont">ccc
+        <input type="radio" name="three" value="praia">ddd
+<br/>
+        <p>???</p>
+        <input type="radio" name="four"value="desc">aaa
+        <input type="radio" name="four" value="hist">bbb
+        <input type="radio" name="four" value="praia">ccc
+        <input type="radio" name="four" value="mont">ddd
+
+        <br/>
+        <p>???</p>
+        <input type="radio" name="five"value="desc">aaa
+        <input type="radio" name="five" value="hist">bbb
+        <input type="radio" name="five" value="praia">ccc
+        <input type="radio" name="five" value="mont">ddd
+        
+    </div>
+    <button type="submit">Confirmar</button>
+    
+</form>
+    
+
+    <%} else if(valida == 4 || valida == 5) {%>
+
+        seu perfil é: <%= perfil %>
+        <form action="/viagemQuestFinal" method="post">
+            
+<%if(valida == 5){%><%=erroPerfil%><%}%>
+
+<% if(perfil == 'praia'){%> 
+    
+    <p>???</p>
+        <input type="radio" name="oneF" value="<%=praia[0]%>">aaa
+        <input type="radio" name="oneF" value="<%=praia[1]%>">bbb
+        
+
+        <p>???</p>
+        <input type="radio" name="twoF" value="<%=praia[1]%>">aaa
+        <input type="radio" name="twoF" value="<%=praia[0]%>">bbb
+        
+
+        <p>???</p>
+        <input type="radio" name="threeF" value="<%=praia[0]%>">aaa
+        <input type="radio" name="threeF" value="<%=praia[1]%>">bbb
+        
+
+        <button type="submit">Confirmar</button>
+    
+    
+    <%}%>
+
+    <%if( perfil == 'hist'){ %> 
+    
+    <p>???</p>
+        <input type="radio" name="oneF" value="<%=hist[0]%>">aaa
+        <input type="radio" name="oneF" value="<%=hist[1]%>">bbb
+        
+
+        <p>???</p>
+        <input type="radio" name="twoF" value="<%=hist[1]%>">aaa
+        <input type="radio" name="twoF" value="<%=hist[0]%>">bbb
+        
+
+        <p>???</p>
+        <input type="radio" name="threeF" value="<%=hist[1]%>">aaa
+        <input type="radio" name="threeF" value="<%=hist[0]%>">bbb
+        
+
+        <button type="submit">Confirmar</button>
+    
+    
+    <%}%>
+
+    <%if( perfil == 'desc'){ %> 
+    
+    <p>???</p>
+        <input type="radio" name="oneF" value="<%=desc[0]%>">aaa
+        <input type="radio" name="oneF" value="<%=desc[1]%>">bbb
+        
+
+        <p>???</p>
+        <input type="radio" name="twoF" value="<%=desc[1]%>">aaa
+        <input type="radio" name="twoF" value="<%=desc[0]%>">bbb
+        
+
+        <p>???</p>
+        <input type="radio" name="threeF" value="<%=desc[1]%>">aaa
+        <input type="radio" name="threeF" value="<%=desc[0]%>">bbb
+        
+
+        <button type="submit">Confirmar</button>
+    
+    
+    <%}%>
+
+    <%if( perfil == 'mont'){ %> 
+    
+    <p>???</p>
+        <input type="radio" name="oneF" value="<%=mont[0]%>">aaa
+        <input type="radio" name="oneF" value="<%=mont[1]%>">bbb
+        
+
+        <p>???</p>
+        <input type="radio" name="twoF" value="<%=mont[1]%>">aaa
+        <input type="radio" name="twoF" value="<%=mont[0]%>">bbb
+        
+
+        <p>???</p>
+        <input type="radio" name="threeF" value="<%=mont[1]%>">aaa
+        <input type="radio" name="threeF" value="<%=mont[0]%>">bbb
+        
+
+        <button type="submit">Confirmar</button>
+    
+    
+    <%}%>
+            
+        
+
+
+            </form>
+    <%} else if(valida == 6){  %>o seu perfil é <%=perfil%> e o destino recomendado é <%=destinoFinal%><%}%>
+
+     
+
         
 
 

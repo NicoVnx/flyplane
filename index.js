@@ -1,6 +1,7 @@
-const express = require("express")
+import express from "express"
 const server = express()
-const routes = require("./src/routes")
+import routes from "./src/routes"
+
 
 
 /*const mongoose = require("mongoose")
