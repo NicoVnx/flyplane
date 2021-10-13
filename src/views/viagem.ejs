@@ -1,5 +1,5 @@
 <%- include('parts/page-head', { title : 'Contato', linkCSS : 'css/contato.css', linkCSS2 : '', linkCSS3 : ''}) %>
-<script src="script/cookieValida.js"></script>
+<script type="module" src="script/cookieValida.js"></script>
 <body>
     
     <!--Header-->
@@ -10,7 +10,10 @@
     <!--Header-->
 
     <div class="container viagem">
-<% if(valida == 0 || valida == 1){ %>        
+
+        
+
+<% if(sessionValida == undefined || sessionValida == 0){ %>        
 <form action="/viagemEmail" method="post">
     
     <div class="cont email">
@@ -38,7 +41,9 @@
         <%}%>
 </form>
 
-   <% if(valida == 2 || valida == 3){ %>
+
+
+   <% if(sessionValida == 2 || valida == 3){ %>
     <form action="/viagemQuest" method="post">
 
         <div class="cont quest">
@@ -78,9 +83,10 @@
     <button type="submit">Confirmar</button>
     
 </form>
-    
+<form action="/viagemBack" method="post"><button type="submit">Voltar</button></form>
+ 
 
-    <%} else if(valida == 4 || valida == 5) {%>
+    <%} else if(sessionValida == 4 || valida == 5) {%>
 
         seu perfil é: <%= perfil %>
         <form action="/viagemQuestFinal" method="post">
@@ -105,6 +111,7 @@
         
 
         <button type="submit">Confirmar</button>
+        
     
     
     <%}%>
@@ -175,12 +182,13 @@
     
     <%}%>
             
-        
-
-
             </form>
-    <%} else if(valida == 6){  %>o seu perfil é <%=perfil%> e o destino recomendado é <%=destinoFinal%><%}%>
-
+            <form action="/viagemBack" method="post"><button type="submit">Voltar</button></form>
+    <%} else if(sessionValida == 6){  %>o seu perfil é <%=perfil%> e o destino recomendado é <%=destinoFinal%>
+    <form action="/viagem" method="post">
+        <button type="submit">Refazer Questionário</button>
+    </form>
+<%}%>
      
 
         

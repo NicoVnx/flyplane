@@ -1,9 +1,20 @@
 import express from "express"
-export const routes = express.Router()
-const views = __dirname + "/views/"
+import  { newUser }  from "./models/Users.js"
+
+const routes = express.Router()
+const views = "C:/Users/nicov/code/flyplane/src" + "/views/"
+
+import session from "express-session"
+
+routes.use(session({
+secret: "adnji3fi9n3d",
+resave: true,
+saveUninitialized: true
+}))
+
 
   var valida = 0
-  const sucesso = "Boa!"
+  const sucesso = ""
   const erro = "* Email Inválido"
   const erroPerfil = "* Preencha tudo"
 
@@ -11,6 +22,7 @@ const views = __dirname + "/views/"
   var destinoFinal
   var perfil
   var destinoViagem = []
+
 
   var praia = ['alagoas', 'cancun']
   var desc = ['ilhas salomão', 'Serra Leoa']
@@ -25,10 +37,15 @@ const views = __dirname + "/views/"
   routes.get("/destinos", (req, res) => res.render(views + "destinos", {}))
 
   routes.get("/viagem", (req, res) => {
+
   if(perfilViagem.length >= 1){for(var i = 0; i = perfilViagem.length; i++){perfilViagem.shift()}}
   if(destinoViagem.length >= 1){for(var i = 0; i = destinoViagem.length; i++){destinoViagem.shift()}}
     valida = 0
-    res.render(views + "viagem", {sucesso, erro, valida, erroPerfil, perfil, praia, desc, hist, mont, destinoFinal})
+
+    var sessionValida = req.session.valida
+    console.log('session valida: ' + sessionValida)
+
+    res.render(views + "viagem", {sucesso, erro, valida, erroPerfil, perfil, praia, desc, hist, mont, destinoFinal, sessionValida})
 
   })
 
@@ -38,14 +55,36 @@ const views = __dirname + "/views/"
 
   //Valida Email
   var validateEmail = function(email) {var re = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;return re.test(email)}
-  console.log(validateEmail(req.body.email))
-  if(!req.body.email || typeof req.body.email == undefined || req.body.email == null) { valida = 1 }
-  if(validateEmail(req.body.email) == false){ valida = 1 }
-  else{ valida = 2 }
+  if(!req.body.email || typeof req.body.email == undefined || req.body.email == null) { 
+    valida = 1
+     }
+  if(validateEmail(req.body.email) == false){ 
+    valida = 1
+    
+   }
+  else{ valida = 2 
+  
+  req.session.valida = valida
 
+  new newUser({
 
+    email: req.body.email,
 
-  res.render(views + "viagem", {sucesso, erro, valida, erroPerfil, perfil, praia, desc, hist, mont, destinoFinal})
+}).save()
+.then(() => {
+    console.log("Email cadastrado")
+}).catch((erro) => {
+    console.log("Houve um erro " + erro)
+})
+
+}
+
+  
+  
+  var sessionValida = req.session.valida
+  console.log('session valida: ' + sessionValida)
+
+  res.render(views + "viagem", {sucesso, erro, valida, erroPerfil, perfil, praia, desc, hist, mont, destinoFinal, sessionValida})
 
   })
 
@@ -60,8 +99,12 @@ const views = __dirname + "/views/"
       {valida = 3}
       else{
         valida = 4
-      perfilViagem.push(req.body.one, req.body.two, req.body.three, req.body.four, req.body.five)}
-console.log(perfilViagem)
+      perfilViagem.push(req.body.one, req.body.two, req.body.three, req.body.four, req.body.five)
+    
+      req.session.valida = valida
+
+    }
+
       var counts = {};
    perfilViagem.forEach(function(x) { counts[x] = (counts[x] || 0)+1; });
 
@@ -76,10 +119,12 @@ console.log(perfilViagem)
              maior = counts[prop];
              perfil = prop;
          }
-    }console.log(perfil)
+    }
 }
 
-      res.render(views + "viagem", {sucesso, erro, valida, erroPerfil, perfil, praia, desc, hist, mont, destinoFinal})
+var sessionValida = req.session.valida
+console.log('session valida: ' + sessionValida)
+      res.render(views + "viagem", {sucesso, erro, valida, erroPerfil, perfil, praia, desc, hist, mont, destinoFinal, sessionValida})
 
   })
 
@@ -90,7 +135,9 @@ console.log(perfilViagem)
 
     if(!req.body.oneF || typeof req.body.oneF == undefined || req.body.oneF == null || !req.body.twoF || typeof req.body.twoF == undefined || req.body.twoF == null
      || !req.body.threeF || typeof req.body.threeF == undefined || req.body.threeF == null)
-    {valida = 5}else{valida = 6}
+    {valida = 5}else{
+      valida = 6
+      req.session.valida = valida}
   
     destinoViagem.push(req.body.oneF, req.body.twoF, req.body.threeF)
 console.log(destinoViagem)
@@ -109,11 +156,29 @@ console.log(destinoViagem)
               destinoFinal = prop;
           }
      }
- }import Cookies from 'js-cookie'
-
- Cookies.set('dark', true, { expires: 10000})
-    
-    res.render(views + "viagem", {sucesso, erro, valida, erroPerfil, perfil, praia, desc, hist, mont, destinoFinal})
+ }
+ 
+ var sessionValida = req.session.valida
+    console.log('session valida: ' + sessionValida)
+    res.render(views + "viagem", {sucesso, erro, valida, erroPerfil, perfil, praia, desc, hist, mont, destinoFinal, sessionValida})
 
   })
 
+  routes.post("/viagem", (req, res) => {
+
+    var sessionValida = undefined
+
+    res.render(views + 'viagem', {sucesso, erro, valida, erroPerfil, perfil, praia, desc, hist, mont, destinoFinal, sessionValida})
+
+  })
+
+  routes.post("/viagemBack", (req, res) => {
+
+    var sessionValida = req.session.valida
+    sessionValida = sessionValida - 2 
+console.log(sessionValida)
+    res.render(views + 'viagem', {sucesso, erro, valida, erroPerfil, perfil, praia, desc, hist, mont, destinoFinal, sessionValida})
+
+  })
+
+  export default routes
