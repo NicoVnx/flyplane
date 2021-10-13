@@ -1,15 +1,6 @@
 const express = require("express")
 const server = express()
-//const admin = require("./src/routes-adm")
 const routes = require("./src/routes")
-const session = require("express-session")
-
-
-
-server.use(session({
-secret: "2347892379842893sdasjkdas",
-resave: true,
-saveUninitialized: true}))
 
 
 /*const mongoose = require("mongoose")
@@ -35,5 +26,4 @@ server.set("view engine", "ejs")
 
 
 server.use(routes)
-//server.use('/admin', admin)
 server.listen(3000, () => console.log("Server Rodando!"))

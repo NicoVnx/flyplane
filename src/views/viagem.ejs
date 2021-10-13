@@ -1,0 +1,27 @@
+<%- include('parts/page-head', { title : 'Contato', linkCSS : 'css/contato.css', linkCSS2 : '', linkCSS3 : ''}) %>
+
+<body>
+    
+    <!--Header-->
+
+    <!--no title vai uma variável string que sera mostrada diferente para cada pagina-->
+    <%- include('parts/page-header', { }) %>
+
+    <!--Header-->
+
+    <div class="container quest">
+<form action="/viagem" method="post">
+
+        <h3>Para continuar digite aqui o seu email: </h3>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email">
+        <button type="submit">Confirmar</button>
+
+</form>
+        
+
+
+    </div>
+
+</body>
+</html>
