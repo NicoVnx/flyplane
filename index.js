@@ -1,7 +1,6 @@
 import express from "express"
 const server = express()
 import routes from "./src/routes.js"
-;
 import pkg from 'mongoose';
 const mongoose = pkg;
 

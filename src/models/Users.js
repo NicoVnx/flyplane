@@ -3,7 +3,7 @@ const  mongoose  = pkg;
 
 /*const uri = "mongodb+srv://nico:123321@cluster0.rtak1.mongodb.net/flyplaneDB?retryWrites=true&w=majority"
 
- mongoose.Promise = global.Promise
+mongoose.Promise = global.Promise
 mongoose.connect(uri, {
 useNewUrlParser: true,
 useUnifiedTopology: true,
@@ -23,7 +23,30 @@ const UserSchema = mongoose.Schema({
         null: false,
         lowercase: true,
         
-    },createdAt:{ 
+    },
+    valida:{
+
+        type: Number,
+        unique: false
+
+    },
+    perfil:{
+        type: String,
+        require: true,
+        unique: false,
+        null: false,
+        lowercase: true,
+
+    },
+    dest:{
+        type: String,
+        require: true,
+        unique: false,
+        null: false,
+        lowercase: true,
+
+    },
+    createdAt:{ 
         type: Date,  
         default: Date.now 
     }
@@ -31,11 +54,14 @@ const UserSchema = mongoose.Schema({
 
  mongoose.model('users', UserSchema)
 
-export const newUser = mongoose.model('users', UserSchema)
+export const User = mongoose.model('users', UserSchema)
 
-/*new newUser({
+/*new User({
 
     email: "alui@eu.com",
+    valida: 2,
+    perfil: "hist",
+    dest: "roma"
 
 }).save()
 .then(() => {
