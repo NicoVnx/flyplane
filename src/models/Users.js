@@ -43,14 +43,47 @@ const UserSchema = mongoose.Schema({
         require: true,
         unique: false,
         null: false,
-        lowercase: true,
+        lowercase: true
 
     },
+    checkOne:{
+        type: String,
+        require: true,
+        unique: false,
+        null: false,
+        lowercase: true},
+        checkTwo:{
+            type: String,
+            require: true,
+            unique: false,
+            null: false,
+            lowercase: true},
+            checkThree:{
+                type: String,
+                require: true,
+                unique: false,
+                null: false,
+                lowercase: true},
+                checkFour:{
+                    type: String,
+                    require: true,
+                    unique: false,
+                    null: false,
+                    lowercase: true},
+                    checkFive:{
+                        type: String,
+                        require: true,
+                        unique: false,
+                        null: false,
+                        lowercase: true},
+                    
     createdAt:{ 
         type: Date,  
         default: Date.now 
     }
 })
+
+
 
  mongoose.model('users', UserSchema)
 

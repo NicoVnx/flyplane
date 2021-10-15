@@ -1,0 +1,125 @@
+*{
+
+    background-color: transparent;
+    font-family: 'Poppins', sans-serif;
+    font-weight:500;
+
+}
+
+body{
+
+    background-color:rgba(225, 232, 255, 0.664);
+    height: 100vh;
+    width: 100vw;
+    max-width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+
+}
+
+ul, li, a, i, p, h1, h2, h3, nav, header{
+
+    background-color: transparent;
+
+}
+
+.container{
+
+    background-color: transparent;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    
+    
+}
+
+*{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    background-color: transparent;
+
+   
+     
+}
+
+html{
+
+    --bg: rgb(255, 253, 242);
+    --color-txtheader: black;
+    --color-tema: rgb(240, 130, 0);
+    --color-sub: rgb(90, 90, 90);
+    --color-txtone: rgb(70, 70, 70);
+    --color-txttwo: rgb(54, 54, 54);
+
+    --color-txthomedest: #574a36;
+
+    --color-border: rgb(124, 124, 124);
+
+    --color-temacontato: #ff515a;
+    --color-temapages: #f09941;
+
+    --bg-footer: rgb(34, 34, 34);
+    --footer-txt: white;
+
+    --bg-hamb: rgb(222,219,211)
+
+}
+
+footer a, footer i, footer p{
+
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+button{
+
+    color: black;
+
+}
+
+li a{
+
+    height: 18px;
+
+}
+
+ul{
+
+    padding: 0;
+
+}
+
+ul, li{
+
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    
+    align-content: center;
+    justify-content: space-between;
+
+}
+ul li a, i, li a, p, a, select{
+
+    text-decoration: none;
+    color: black;
+
+}
+
+input:focus, select:focus{
+
+    outline: 0;
+
+}

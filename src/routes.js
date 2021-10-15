@@ -22,11 +22,18 @@ var perfilViagem = []
 var destinoFinal
 var perfil
 
+var erroV = false
 var destinoViagem = []
 var praia = ['alagoas', 'cancun']
 var desc = ['ilhas salomão', 'Serra Leoa']
 var hist = ['roma', 'fortaleza']
 var mont = ['roraima', 'suiça']
+
+var checkOne = "ns"
+var checkTwo = "ns"
+var checkThree = "ns"
+var checkFour = "ns"
+var checkFive = "ns"
 
 routes.get("/", (req, res) => {
 
@@ -44,11 +51,13 @@ routes.get("/viagem", (req, res) => {
 
   if(perfilViagem.length >= 1){for(var i = 0; i = perfilViagem.length; i++){perfilViagem.shift()}}
   if(destinoViagem.length >= 1){for(var i = 0; i = destinoViagem.length; i++){destinoViagem.shift()}}
+  
     
-
   console.log("V " + valida)
-
-  res.render(views + "viagem", {sucesso, erro, valida, erroPerfil, perfil, praia, desc, hist, mont, destinoFinal})
+checkOne = 
+  res.render(views + "viagem", {sucesso, erro, erroV, valida, erroPerfil, perfil, praia, desc, hist, mont, destinoFinal,
+    checkOne, checkTwo, checkThree, checkFour, checkFive})
+  erroV = false
 
 })
 
@@ -56,13 +65,15 @@ routes.post("/viagemEmail", (req, res) =>{
 
   //Valida Email
   var validateEmail = function(email) {var re = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;return re.test(email)}
-  if(!req.body.email || typeof req.body.email == undefined || req.body.email == null) { valida = 1} 
-  if(validateEmail(req.body.email) == false){ valida = 1 }
+  if(validateEmail(req.body.email) == false){ erroV = true
+    console.log(erro)
+  res.redirect('/viagem')}
 
   else{
-
+    erroV = false
     req.session.email = req.body.email
-
+    
+    
       User.findOne({email:req.body.email}).then((user) =>{
 
       console.log('existe ' + req.session.email)
@@ -77,9 +88,14 @@ routes.post("/viagemEmail", (req, res) =>{
     new User({
 
       email: req.body.email,
-      valida: 2,
+      valida: 1,
       perfil: "ns",
-      dest: "ns"
+      dest: "ns",
+     checkOne: "ns",
+  checkTwo: "ns",
+  checkThree: "ns",
+  checkFour: "ns",
+  checkFive: "ns",
 
     }).save()
     .then(() => {
@@ -87,10 +103,12 @@ routes.post("/viagemEmail", (req, res) =>{
     }).catch((erro) => {
         console.log("Houve um erro " + erro)
     })
-res.render(views + "viagem", {sucesso, erro, valida, erroPerfil, perfil, praia, desc, hist, mont, destinoFinal})
+    valida = 1
+    res.redirect("/viagem")
   })
   }
-
+ 
+  
   console.log('V ' + valida)
 
   
@@ -102,11 +120,11 @@ routes.post("/viagemQuest", (req, res) =>{
     if(!req.body.one || typeof req.body.one == undefined || req.body.one == null || !req.body.two || typeof req.body.two == undefined || req.body.two == null
     || !req.body.three || typeof req.body.three == undefined || req.body.three == null || !req.body.four || typeof req.body.four == undefined || req.body.four == null
     || !req.body.five || typeof req.body.five == undefined || req.body.five == null)
-    { valida = 3 }
+    { erroV = true }
     else{
-
+      erroV = false
       console.log(req.session.email)
-    valida = 4
+    valida = 2
 
     perfilViagem.push(req.body.one, req.body.two, req.body.three, req.body.four, req.body.five)
     var counts = {};
@@ -126,6 +144,11 @@ User.findOne({email:req.session.email}).then((user)=>{
 console.log('achei!')
   user.valida = valida
   user.perfil = perfil
+  user.checkOne = req.body.one
+  user.checkTwo = req.body.two
+  user.checkThree = req.body.three
+  user.checkFour = req.body.four
+  user.checkFive = req.body.five
 
   user.save().then(() =>{ 
 
@@ -141,19 +164,18 @@ console.log('achei!')
 }).catch((err)=>{console.log(err)})
 }
 console.log('V ' + valida)
-
-
-res.render(views + "viagem", {sucesso, erro, valida, erroPerfil, perfil, praia, desc, hist, mont, destinoFinal})
+res.redirect("/viagem")
 
 })
 
 routes.post("/viagemQuestFinal", (req, res) => {
 
   if(!req.body.oneF || typeof req.body.oneF == undefined || req.body.oneF == null || !req.body.twoF || typeof req.body.twoF == undefined || req.body.twoF == null
-  || !req.body.threeF || typeof req.body.threeF == undefined || req.body.threeF == null){valida = 5}
+  || !req.body.threeF || typeof req.body.threeF == undefined || req.body.threeF == null){erroV = true}
   else{
+    erroV = false
     console.log(req.session.email)
-    valida = 6
+    valida = 3
 
   destinoViagem.push(req.body.oneF, req.body.twoF, req.body.threeF)
 
@@ -196,41 +218,47 @@ console.log("achei!")
 
 }
   console.log('V ' + valida)
-  res.render(views + "viagem", {sucesso, erro, valida, erroPerfil, perfil, praia, desc, hist, mont, destinoFinal})
+  res.redirect("/viagem")
 
 })
 
 routes.post("/viagemBack", (req, res) => {
 
-  valida = valida - 2  
+  if(valida == 1){
+    valida = undefined
+
+req.session.destroy()
+
+}
+  else if(valida == 2){
+    valida = 1
+  }
+
+  else if(valida == 3){
+
+    req.session.destroy()
+    valida = undefined
+
+
+  }
+
 console.log('V ' + valida)
 
-User.findOne({email:req.session.email}).then((user)=>{
 
-  user.valida = valida
 
-  user.save().then(() =>{ 
-
-    console.log('user salvo com sucesso!')
-
-}).catch((err) =>{
-
-    
-  console.log('Erro interno ao editar user' + err)
-    
-})
-
-}).catch((err)=>{console.log(err)})
-  res.render(views + 'viagem', {sucesso, erro, valida, erroPerfil, perfil, praia, desc, hist, mont, destinoFinal})
+  res.redirect('/viagem')
 
 })
 
-routes.post("/viagem", (req, res) => {
-valida = 2
+routes.post("/viagemRe", (req, res) => {
+
+valida = 1
   User.findOne({email:req.session.email}).then((user)=>{
 
     
     user.valida = valida
+    user.perfil = "ns"
+    user.dest = "ns"
 
     user.save().then(() =>{ 
 
@@ -249,7 +277,7 @@ valida = 2
 
   })
 
-  res.render(views + 'viagem', {sucesso, erro, valida, erroPerfil, perfil, praia, desc, hist, mont, destinoFinal})
+  res.redirect("/viagem")
 
 })
 

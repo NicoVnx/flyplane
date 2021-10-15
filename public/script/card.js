@@ -1,15 +1,17 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const card = document.querySelectorAll("div.card")
+    const card = document.querySelectorAll("div.click")
     const cardc = document.querySelectorAll("div.cont-card")
     const desc = document.querySelectorAll("p.desc")
 
     
       card[0].addEventListener("mouseover", function (event) {
       cardc[0].classList.remove("hide")
+      
       desc[0].classList.remove("hide")})
 
       card[0].addEventListener("mouseleave", function (event) {
       cardc[0].classList.add("hide")
+      
       desc[0].classList.add("hide")})
 
 

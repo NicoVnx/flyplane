@@ -13,41 +13,36 @@
 
         
 
-<% if(valida == undefined || valida == 0){ %>        
+<% if(valida == undefined || valida == 0){ %>    
+
+        
+            
+            
 <form action="/viagemEmail" method="post">
     
     <div class="cont email">
         <h3>Para continuar digite aqui o seu email: </h3>
 
-        <% if(valida == 1){%>
-
-            <p><%=erro%></p>
-            <% console.log('erro')}
-
-            else if(valida == 2){ %>
-
-                <p><%=sucesso %></p>
-                <% console.log('sucesso')} %>
+        <% if(erroV == true){%>
+            <p><%= erro %> </p>
+            <%}%>
                   
 
         <label for="email">Email</label>
         <input type="text" id="email" name="email">
         <button id="test" type="submit">Confirmar</button>
     </div>
-    <%} else{%>
+    <%}%>
 
-        
-        
-        <%}%>
 </form>
 
 
 
-   <% if(valida == 2 || valida == 3){ %>
+   <% if(valida == 1){ %>
     <form action="/viagemQuest" method="post">
 
         <div class="cont quest">
-    <%if(valida == 3){%><%= erroPerfil %><%}%>
+    <%if(erroV == true){%><%= erroPerfil %><%}%>
         <p>???</p>
         <input type="radio" name="one" value="praia">aaa
         <input type="radio" name="one" value="hist">bbb
@@ -83,15 +78,15 @@
     <button type="submit">Confirmar</button>
     
 </form>
-<form action="/viagemBack" method="post"><button type="submit">Voltar</button></form>
+<form action="/viagemBack" method="post"><button type="submit">Mudar Email</button></form>
  
 
-    <%} else if(valida == 4 || valida == 5) {%>
+    <%} else if(valida == 2) {%>
 
         seu perfil é: <%= perfil %>
         <form action="/viagemQuestFinal" method="post">
             
-<%if(valida == 5){%><%=erroPerfil%><%}%>
+<%if(erroV == true){%><%=erroPerfil%><%}%>
 
 <% if(perfil == 'praia'){%> 
     
@@ -110,7 +105,7 @@
         <input type="radio" name="threeF" value="<%=praia[1]%>">bbb
         
 
-        <button type="submit">Confirmar</button>
+        <p><button type="submit">Confirmar</button></p>
         
     
     
@@ -133,7 +128,7 @@
         <input type="radio" name="threeF" value="<%=hist[0]%>">bbb
         
 
-        <button type="submit">Confirmar</button>
+        <p><button type="submit">Confirmar</button></p>
     
     
     <%}%>
@@ -155,7 +150,7 @@
         <input type="radio" name="threeF" value="<%=desc[0]%>">bbb
         
 
-        <button type="submit">Confirmar</button>
+        <p><button type="submit">Confirmar</button></p>
     
     
     <%}%>
@@ -177,16 +172,19 @@
         <input type="radio" name="threeF" value="<%=mont[0]%>">bbb
         
 
-        <button type="submit">Confirmar</button>
+        <p><button type="submit">Confirmar</button></p>
     
     
     <%}%>
             
             </form>
             <form action="/viagemBack" method="post"><button type="submit">Voltar</button></form>
-    <%} else if(valida == 6){  %>o seu perfil é <%=perfil%> e o destino recomendado é <%=destinoFinal%>
-    <form action="/viagem" method="post">
+    <%} else if(valida == 3){  %>o seu perfil é <%=perfil%> e o destino recomendado é <%=destinoFinal%>
+    <form action="/viagemRe" method="post">
         <button type="submit">Refazer Questionário</button>
+    </form>
+    <form action="/viagemBack" method="post">
+        <button type="submit">Mudar Email</button>
     </form>
 <%}%>
      
