@@ -123,3 +123,35 @@ input:focus, select:focus{
     outline: 0;
 
 }
+
+.hr{
+    margin: 10vh 0;
+    height: 1px;
+    width: 100%;
+    background-color: #54545447;
+    border-bottom: 2px rgb(0 0 0);
+ }
+
+ .sub{
+
+    color: rgb(131, 131, 131);
+    
+    font-weight: 400;
+    font-size: 19px;
+    text-decoration: underline;
+    font-style: italic;
+
+}
+
+a.sub , p.sub {
+
+    font-size: 17px;
+
+}
+
+i.sub{
+
+    text-decoration: none;
+    margin-left: .3vw;
+
+}

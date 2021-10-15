@@ -26,47 +26,56 @@
 
 }
 
-.sub{
 
-    color: rgb(131, 131, 131);
-    font-size: 17px;
-    font-weight: 400;
 
-}
 
 .sub.esp{
 
     letter-spacing: .8vw;
+    text-decoration: none;
+    font-size: 20px;
+    font-style: normal;
 
 }
 
 .sub.one{
 
-    margin-bottom: 15vh;
-
+    font-size: 22px;
+    margin-bottom: 22vh;
+    text-decoration: none;
+    font-style: normal;
 }
 
 #title-home{
 
     display: flex;
     height: 180px;
+    display: flex;
+    height: 180px;
+    justify-content: center;
+    gap: 21px;
    
 }
 
 #title-home h2 {
-    width: 100%;
+    width: fit-content;
     height: 100%;
+    
+   
+}
+
+#title-home .blue{
+
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; 
-    background-image: linear-gradient(to right, rgb(0, 0, 0) 0%, rgb(0, 0, 0) 57%, rgb(53, 100, 255) 57%, rgb(4, 39, 155) 100%);
-   
+    background-image: linear-gradient(to right, rgb(44, 93, 253)0%, rgb(7, 47, 182)100%);
+
 }
 
 .destinos{
 
     display: flex;
     justify-content: center;
-    margin-bottom: 20vh;
 
 
 }
@@ -135,7 +144,7 @@ position: absolute;
     
     gap: .5vh;
     display: flex;
-    background-color: rgba(248, 254, 255, 0.274);
+    background-color: rgba(0, 0, 0, 0.363);
     backdrop-filter: blur(3px);
     border-radius: 20px 20px 0 0;
     padding: 4% 7% 7% 7%;
@@ -143,7 +152,8 @@ position: absolute;
     flex-direction: column;
     transition: .7s margin-bottom, .7s overflow, .7s visibility, .7s opacity;
 margin-bottom: 0;
-    
+
+
 
 }
 
@@ -156,6 +166,8 @@ margin-bottom: 0;
 
 .cont-card p{
 
+    color: white;
+    
     font-size: 15px;
 
 }
@@ -173,7 +185,6 @@ p.sub.footer{
     width: 80%;
   
     text-align: right;
-    text-decoration: underline;
 
 }
 
@@ -205,3 +216,87 @@ p.sub.footer{
 
 }
 
+.viagemHome{
+
+    width: 100%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+}
+
+.viagemHomeTxt{
+
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+    width: 50%;
+    text-align: left;
+
+
+}
+
+.viagemHomeTxt p {
+
+    font-size: 25px;
+
+}
+
+.viagemHomeTxt a{
+
+    font-size: 15px;
+    padding: .8vw;
+    color: white;
+    border-radius: 12px;
+    width: fit-content;
+    background-color: rgb(108, 59, 255);
+
+}
+
+.sobreHome{
+
+    width: 100%;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+
+}
+
+.sobreHomeTxt{
+
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+    width: 50%;
+    text-align: right;
+
+    padding: 0 4vw;
+    box-sizing: border-box;
+    
+}
+.sobreHomeTxt p {
+
+    width: 100%;
+    font-size: 23px;
+    text-align: right;
+    
+    
+
+}
+
+.imgSobre{
+
+    width: 320px;
+    height: 320px;
+
+
+}
+
+.imgSobre img{
+
+    width: 100%;
+    height: 100%;
+
+}
