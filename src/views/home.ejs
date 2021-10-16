@@ -1,14 +1,12 @@
-<%- include('parts/page-head', { title : 'Flyplane', linkCSS : 'css/home.css', linkCSS2 : '', linkCSS3 : ''}) %>
+<%- include('parts/page-head', { title : 'Flyplane', linkCSS : 'css/home.css'}) %>
 <script src="/script/card.js"></script>
 
 <body>
     
-    <!--Header-->
+    
+    <%- include('parts/page-header') %>
 
-    <!--no title vai uma variável string que sera mostrada diferente para cada pagina-->
-    <%- include('parts/page-header', { }) %>
-
-    <!--Header-->
+    
     <div class="container home">
 
         <div class="content-home">
@@ -117,7 +115,8 @@
 
 
     </div>
+    
     </div>
-
+    <%- include('parts/footer') %>
 </body>
 </html>

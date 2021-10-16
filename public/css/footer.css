@@ -6,14 +6,15 @@ footer{
     padding: 30px 0;
     width: 100vw;
     max-width: 100%;
+    bottom: 0;
     
 }
 
 .content-footer{
 
-    max-width: 600px;
+    max-width: 800px;
     margin: 0 auto;
-    width: 35%;
+    width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -36,6 +37,13 @@ footer ul li a{
 
 }
 
+footer #navFooter{
+
+    width: 70%;
+    margin: 0 auto;
+    box-sizing: border-box;
+
+}
 
 
 footer nav ul{
@@ -78,5 +86,28 @@ footer nav ul{
     margin: 0;
     font-size: 15px;
     font-style: italic;
+
+}
+
+@media (max-width: 460px){
+
+    footer nav ul{
+
+        gap: 1vh;
+        flex-direction: column;
+
+    }
+
+    footer{
+
+        padding: 15px 0
+
+    }
+
+    footer nav ul li a{
+
+        font-size: 13px;
+
+    }
 
 }

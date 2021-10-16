@@ -9,13 +9,6 @@
 body{
 
     background-color:rgba(225, 232, 255, 0.664);
-    height: 100vh;
-    width: 100vw;
-    max-width: 100%;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 
 
 
