@@ -1,0 +1,124 @@
+.container.viagemDiv{
+
+    padding-top: 80px;
+    height: fit-content;
+}
+
+.content-viagem{
+
+    width: 100%;
+    height: 100%;
+    max-width: 1100px;
+
+    margin: 10vh 0;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+
+.titleViagem{
+
+    color: rgb(41, 91, 255);
+    font-size: 22px;
+    margin-top: 0;
+
+}
+
+.cont.email{
+
+   display: flex;
+   flex-direction: column;
+   width: 100%;
+   max-width: 500px;
+
+    gap: 30px;
+
+    padding: 4vh 5vh;
+
+    border-radius: 3px;
+    border: 1px solid black;
+
+}
+
+.partEmail{
+width: 100%;
+    max-width: 300px;
+    display: flex;
+    height: 153px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    margin: auto;
+
+    gap: 1vh;
+
+}
+
+.partInput{
+
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 100%;
+    height: 40px;
+
+}
+
+.partEmail input{
+
+    width: 100%;
+    border: 0;
+    border-bottom: 2px solid black;
+
+}
+
+.partEmail label{
+    text-align: left;
+width: 100%;
+    
+
+}
+
+.partEmail .submit{
+    
+    margin-top: 5vh;
+}
+
+.erro{
+
+    text-align: left;
+    margin: 0;
+    font-size: 14px;
+    font-style: italic ;
+    color: rgb(255, 64, 64);
+
+}
+
+.submit{
+
+    transition: 0.5s;
+    border: 0;
+
+}
+
+.submit:hover{
+
+    transition: 0.25s;
+
+    color: rgb(0, 226, 0);
+    cursor: pointer;
+
+}
+
+.questsOne{
+
+    display: flex;
+    flex-direction: column;
+
+}
+ 
+
+ 

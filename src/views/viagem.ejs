@@ -1,198 +1,221 @@
-<%- include('parts/page-head', { title : 'Viagem', linkCSS : 'css/contato.css'}) %>
+<%- include('parts/page-head', { title : 'Viagem', linkCSS : 'css/viagem.css'}) %>
 
 <body>
     
-    <!--Header-->
-
-    <!--no title vai uma variável string que sera mostrada diferente para cada pagina-->
     <%- include('parts/page-header', { }) %>
 
-    <!--Header-->
+<div class="container viagemDiv">
 
-    <div class="container viagem">
+    <div class="content-viagem">
 
-        
+  
 
-<% if(valida == undefined || valida == 0){ %>    
+    <% if(valida == undefined || valida == 0){ %>    
 
-        
-            
-            
-<form action="/viagemEmail" method="post">
-    
+    <form action="/viagemEmail" method="post">
+
     <div class="cont email">
-        <h3>Para continuar digite aqui o seu email: </h3>
+    <h3 class="titleViagem emailViagem">Para continuar digite aqui o seu email </h3>
 
-        <% if(erroV == true){%>
-            <p><%= erro %> </p>
-            <%}%>
-                  
+    
 
-        <label for="email">Email</label>
-        <input type="text" id="email" name="email">
-        <button id="test" type="submit">Confirmar</button>
+<div class="partEmail">
+    <label for="email">Email:</label>
+    <div class="partInput">
+    <input type="text" id="email" name="email">
+
+    <% if(erroV == true){%>
+    <p class="erro"><%= erro %> </p>
+    <%}%>
+</div>
+    <button id="test" type="submit" class="submit">Confirmar</button>
     </div>
+    </div>
+    
     <%}%>
 
-</form>
+    </form>
 
 
-
-   <% if(valida == 1){ %>
+    <% if(valida == 1){ %>
     <form action="/viagemQuest" method="post">
 
-        <div class="cont quest">
-    <%if(erroV == true){%><%= erroPerfil %><%}%>
-        <p>???</p>
-        <input type="radio" name="one" value="praia">aaa
-        <input type="radio" name="one" value="hist">bbb
-        <input type="radio" name="one" value="mont">ccc
-        <input type="radio" name="one" value="desc">ddd
-<br/>
-        <p>???</p>
-        <input type="radio" name="two"value="mont">aaa
-        <input type="radio" name="two" value="praia">bbb
-        <input type="radio" name="two"value="desc">ccc
-        <input type="radio" name="two" value="hist">ddd
-<br/>
-        <p>???</p>
-        <input type="radio" name="three" value="hist">aaa
-        <input type="radio" name="three"value="desc">bbb
-        <input type="radio" name="three" value="mont">ccc
-        <input type="radio" name="three" value="praia">ddd
-<br/>
-        <p>???</p>
-        <input type="radio" name="four"value="desc">aaa
-        <input type="radio" name="four" value="hist">bbb
-        <input type="radio" name="four" value="praia">ccc
-        <input type="radio" name="four" value="mont">ddd
 
-        <br/>
-        <p>???</p>
-        <input type="radio" name="five"value="desc">aaa
-        <input type="radio" name="five" value="hist">bbb
-        <input type="radio" name="five" value="praia">ccc
-        <input type="radio" name="five" value="mont">ddd
-        
+    <div class="cont quest">
+    <%if(erroV == true){%><%= erroPerfil %><%}%>
+    <p class="titleQuest">1.Qual sua prioridade na hora de montar um roteiro de viagem?</p>
+
+    <div class="questsOne">
+    <input type="radio" name="one" value="praia" id="oneQone"><label for="oneQone"> Apreciar alegrias simples da vida</label>
+    <input type="radio" name="one" value="hist" id="oneQtwo"> <label for="oneQtwo">Ter uma variedade de programas culturais</label> 
+    <input type="radio" name="one" value="mont" id="oneQthree"> <label for="oneQthree">Recarregar as energias</label> 
+    <input type="radio" name="one" value="desc" id="oneQfour"> <label for="oneQfour"> Sair dos padrões turísticos</label>
     </div>
-    <button type="submit">Confirmar</button>
-    
-</form>
-<form action="/viagemBack" method="post"><button type="submit">Mudar Email</button></form>
- 
+    <br/>
+
+    <p class="titleQuest">2.Você se considera uma pessoa relativamente...</p>
+
+    <div class="questsOne">
+    <input type="radio" name="two"value="mont" id="twoQone"><label for="twoQone">Reservada e sossegada</label> 
+    <input type="radio" name="two" value="praia" id="twoQtwo"><label for="twoQtwo">Descontraída e despreocupada</label>
+    <input type="radio" name="two"value="desc" id="twoQthree"><label for="twoQthree">Aventureira e corajosa</label>
+    <input type="radio" name="two" value="hist" id="twoQfour"><label for="twoQfour">Curiosa e Crítica</label>
+    </div>
+    <br/>
+
+    <p class="titleQuest">3.Qual estação do ano você prefere mais?</p>
+
+    <div class="questsOne">
+    <input type="radio" name="three" value="hist">Inverno
+    <input type="radio" name="three"value="desc">Primavera 
+    <input type="radio" name="three" value="praia">Verão 
+    <input type="radio" name="three" value="mont">Outono
+    </div>
+
+    <br/>
+    <p class="titleQuest">4.Qual dessas opções culinárias você preferia comer?</p>
+
+    <div class="questsOne">
+    <input type="radio" name="four"value="desc">Comidas Exóticas
+    <input type="radio" name="four" value="hist">Massas e comidas típicas da região
+    <input type="radio" name="four" value="praia">Frutos do mar e Peixes
+    <input type="radio" name="four" value="mont">Comidas quentes e queijos
+    </div>
+    <br/>
+
+    <p class="titleQuest">5.Imagine essa situação: Se você tivesse que passar um tempo em uma ilha deserta, o que você levaria?</p>
+
+    <div class="questsOne">
+    <input type="radio" name="five"value="desc">Levaria um kit de sobrevivência, um mapa e uma série de utensílios como facas, garrafas ,cordas e curativos
+    <input type="radio" name="five" value="hist">Levaria livros, papel, canetas e uma camera fotográfica
+    <input type="radio" name="five" value="praia">Meus amigos para aproveitar comigo, um cooler, caixinha de som e protetor solar
+    <input type="radio" name="five" value="mont">Muitos lencinhos para chorar pois seria péssima essa situação
+    </div>
+
+    </div>
+    <button type="submit" class="submit">Confirmar</button>
+
+    </form>
+
+    <form action="/viagemBack" method="post"><button type="submit">Mudar Email</button></form>
 
     <%} else if(valida == 2) {%>
+    seu perfil é: <%= perfil %>
 
-        seu perfil é: <%= perfil %>
-        <form action="/viagemQuestFinal" method="post">
-            
-<%if(erroV == true){%><%=erroPerfil%><%}%>
+    <form action="/viagemQuestFinal" method="post">
 
-<% if(perfil == 'praia'){%> 
-    
+    <%if(erroV == true){%><%=erroPerfil%><%}%>
+
+    <% if(perfil == 'praia'){%> 
+
     <p>???</p>
-        <input type="radio" name="oneF" value="<%=praia[0]%>">aaa
-        <input type="radio" name="oneF" value="<%=praia[1]%>">bbb
-        
+    <input type="radio" name="oneF" value="<%=praia[0]%>">aaa
+    <input type="radio" name="oneF" value="<%=praia[1]%>">bbb
 
-        <p>???</p>
-        <input type="radio" name="twoF" value="<%=praia[1]%>">aaa
-        <input type="radio" name="twoF" value="<%=praia[0]%>">bbb
-        
 
-        <p>???</p>
-        <input type="radio" name="threeF" value="<%=praia[0]%>">aaa
-        <input type="radio" name="threeF" value="<%=praia[1]%>">bbb
-        
+    <p>???</p>
+    <input type="radio" name="twoF" value="<%=praia[1]%>">aaa
+    <input type="radio" name="twoF" value="<%=praia[0]%>">bbb
 
-        <p><button type="submit">Confirmar</button></p>
-        
-    
-    
+
+    <p>???</p>
+    <input type="radio" name="threeF" value="<%=praia[0]%>">aaa
+    <input type="radio" name="threeF" value="<%=praia[1]%>">bbb
+
+
+    <p><button type="submit">Confirmar</button></p>
+
+
+
     <%}%>
 
     <%if( perfil == 'hist'){ %> 
-    
+
     <p>???</p>
-        <input type="radio" name="oneF" value="<%=hist[0]%>">aaa
-        <input type="radio" name="oneF" value="<%=hist[1]%>">bbb
-        
+    <input type="radio" name="oneF" value="<%=hist[0]%>">aaa
+    <input type="radio" name="oneF" value="<%=hist[1]%>">bbb
 
-        <p>???</p>
-        <input type="radio" name="twoF" value="<%=hist[1]%>">aaa
-        <input type="radio" name="twoF" value="<%=hist[0]%>">bbb
-        
 
-        <p>???</p>
-        <input type="radio" name="threeF" value="<%=hist[1]%>">aaa
-        <input type="radio" name="threeF" value="<%=hist[0]%>">bbb
-        
+    <p>???</p>
+    <input type="radio" name="twoF" value="<%=hist[1]%>">aaa
+    <input type="radio" name="twoF" value="<%=hist[0]%>">bbb
 
-        <p><button type="submit">Confirmar</button></p>
-    
-    
+
+    <p>???</p>
+    <input type="radio" name="threeF" value="<%=hist[1]%>">aaa
+    <input type="radio" name="threeF" value="<%=hist[0]%>">bbb
+
+
+    <p><button type="submit">Confirmar</button></p>
+
+
     <%}%>
 
     <%if( perfil == 'desc'){ %> 
-    
+
     <p>???</p>
-        <input type="radio" name="oneF" value="<%=desc[0]%>">aaa
-        <input type="radio" name="oneF" value="<%=desc[1]%>">bbb
-        
+    <input type="radio" name="oneF" value="<%=desc[0]%>">aaa
+    <input type="radio" name="oneF" value="<%=desc[1]%>">bbb
 
-        <p>???</p>
-        <input type="radio" name="twoF" value="<%=desc[1]%>">aaa
-        <input type="radio" name="twoF" value="<%=desc[0]%>">bbb
-        
 
-        <p>???</p>
-        <input type="radio" name="threeF" value="<%=desc[1]%>">aaa
-        <input type="radio" name="threeF" value="<%=desc[0]%>">bbb
-        
+    <p>???</p>
+    <input type="radio" name="twoF" value="<%=desc[1]%>">aaa
+    <input type="radio" name="twoF" value="<%=desc[0]%>">bbb
 
-        <p><button type="submit">Confirmar</button></p>
-    
-    
+
+    <p>???</p>
+    <input type="radio" name="threeF" value="<%=desc[1]%>">aaa
+    <input type="radio" name="threeF" value="<%=desc[0]%>">bbb
+
+
+    <p><button type="submit">Confirmar</button></p>
+
+
     <%}%>
 
     <%if( perfil == 'mont'){ %> 
-    
+
     <p>???</p>
-        <input type="radio" name="oneF" value="<%=mont[0]%>">aaa
-        <input type="radio" name="oneF" value="<%=mont[1]%>">bbb
-        
+    <input type="radio" name="oneF" value="<%=mont[0]%>">aaa
+    <input type="radio" name="oneF" value="<%=mont[1]%>">bbb
 
-        <p>???</p>
-        <input type="radio" name="twoF" value="<%=mont[1]%>">aaa
-        <input type="radio" name="twoF" value="<%=mont[0]%>">bbb
-        
 
-        <p>???</p>
-        <input type="radio" name="threeF" value="<%=mont[1]%>">aaa
-        <input type="radio" name="threeF" value="<%=mont[0]%>">bbb
-        
+    <p>???</p>
+    <input type="radio" name="twoF" value="<%=mont[1]%>">aaa
+    <input type="radio" name="twoF" value="<%=mont[0]%>">bbb
 
-        <p><button type="submit">Confirmar</button></p>
-    
-    
+
+    <p>???</p>
+    <input type="radio" name="threeF" value="<%=mont[1]%>">aaa
+    <input type="radio" name="threeF" value="<%=mont[0]%>">bbb
+
+
+    <p><button type="submit">Confirmar</button></p>
+
+
     <%}%>
-            
-            </form>
-            <form action="/viagemBack" method="post"><button type="submit">Voltar</button></form>
+
+    </form>
+
+    <form action="/viagemBack" method="post"><button type="submit">Voltar</button></form>
+
     <%} else if(valida == 3){  %>o seu perfil é <%=perfil%> e o destino recomendado é <%=destinoFinal%>
+
     <form action="/viagemRe" method="post">
-        <button type="submit">Refazer Questionário</button>
+    <button type="submit">Refazer Questionário</button>
     </form>
+
     <form action="/viagemBack" method="post">
-        <button type="submit">Mudar Email</button>
+    <button type="submit">Mudar Email</button>
     </form>
-<%}%>
-     
 
-        
+    <%}%>
 
 
+            
     </div>
 
+</div>
+<%- include('parts/footer', { }) %>
 </body>
 </html>

@@ -1,15 +1,6 @@
 .container.sobre{
 
-    
-    height: 80vh;
-    width: 45%;
-    margin-bottom: 120px;
-    
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    padding: 180px 0 0 0;
+    padding-top: 80px;
     
 
 }
@@ -21,31 +12,40 @@
     align-items: center;
     text-align: center;
 
-    height: 95%;
+    height: 100%;
+max-width: 1100px;
+    width: 100%;
 
-    width: 85%;
-    padding: 50px ;
 
-    background-image: linear-gradient(to bottom, rgb(229, 233, 252) , rgb(228, 232, 248));
+    margin: 10vh auto;
+
+    
     border-radius: 20px;
-    box-shadow: 6px 6px 18px rgba(0, 0, 0, 0.199);
+    
+}
+
+.sobreTxt{
+
+    box-sizing: border-box;
+    padding: 7vh 4vw;
+box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.082);
 }
 
 .content-sobre h2{
 
     font-size: 50px;
-    color: rgb(79, 1, 224);
+    color: rgb(41, 91, 255);
 
-
-    margin-bottom: 80px;
-    background-color: transparent;
+margin: 0;
+    margin-bottom: 5vh;
+    
 
 }
 
 .content-sobre p{
 
-    color: rgb(0, 0, 0);
-    font-size: 30px;
-    background-color: transparent;
+    color: rgb(36, 36, 36);
+    font-size: 24px;
+    
 
 }
