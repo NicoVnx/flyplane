@@ -117,8 +117,44 @@ width: 100%;
 
     display: flex;
     flex-direction: column;
+    align-items: center ;
 
 }
- 
+
+.cont.quest{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 3px;
+    padding: 3vh 5vw;
+    box-sizing: border-box;
+
+}
+
+label{
+
+width: fit-content;
+
+}
+
+label:hover{
+
+    cursor: pointer;
+    color: rgb(6, 48, 187);
+
+}
+
+input[type=radio]{
+
+    display: none;
+
+}
+
+input[type=radio]:checked + label {
+    color: rgb(41, 91, 255);
+    
+  } 
 
  
