@@ -2,117 +2,114 @@
 <script src="/script/card.js"></script>
 <body>
     
-    <!--Header-->
+   
+    <%- include('parts/page-header') %>
 
-    <!--no title vai uma variável string que sera mostrada diferente para cada pagina-->
-    <%- include('parts/page-header', { }) %>
+    
+<div class="container dest">
 
-    <!--Header-->
-    <div class="container dest">
+    <div class="content-dest">
 
-        <div class="main-dest">
-
-        <div id="title-dest">
+        <div class="title-dest">
             <h2>Nossos Destinos</h2>
+            <p class="sub one">Aqui nossos parceiros fazem as melhores viagens pra você</p>
         </div>
+        
+        
+        <ul class="listaDest">
+        
+            <li class="card rj">
+                
+                <p>Rio de janeiro</p>
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p>Praias/Paisagens</p>
+                <a href="">Visite Aqui</a>
+            </li>
 
-        <p class="sub">Aqui nossos parceiros fazem as melhores viagens pra você</p>
+            <li class="card sp">
+                
+                <p>São Paulo</p>
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p>Arquitetura/Paisagens/Cultura</p>
+                <a href="">Visite Aqui</a>
+            </li>
 
-        </div>
+            <li class="card al">
+                
+                <p>Alagoas</p>
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p>Paisagens/Cultura/Praias</p>
+                <a href="">Visite Aqui</a>
+            </li>
 
-        <div class="destinos">
-            
-            <ul class="lista">
-            
-                <li class="card rj">
-                    <div class="img"><img src="/img/rj.jpg" alt=""></div>
-                    <p>Rio de janeiro</p>
-                    <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <p>Praias/Paisagens</p>
-                    <a href="">Visite Aqui</a>
-                </li>
+            <li class="card paris">
+                
+                <p>Paris</p>
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p>Paisagens/Cultura/Arquitetura</p>
+                <a href="">Visite Aqui</a>
+            </li>
 
-                <li class="card sp">
-                    <div class="img"><img src="/img/sp.jpg" alt=""></div>
-                    <p>São Paulo</p>
-                    <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <p>Arquitetura/Paisagens/Cultura</p>
-                    <a href="">Visite Aqui</a>
-                </li>
+            <li class="card suica">
+                
+                <p>Suiça</p>
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p>Paisagens/Cultura/Arquitetura</p>
+                <a href="">Visite Aqui</a>
+            </li>
 
-                <li class="card al">
-                    <div class="img"><img src="/img/al.jpg" alt=""></div>
-                    <p>Alagoas</p>
-                    <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <p>Paisagens/Cultura/Praias</p>
-                    <a href="">Visite Aqui</a>
-                </li>
+            <li class="card japao">
+                
+                <p>Japão</p>
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p>Paisagens/Cultura/Arquitetura</p>
+                <a href="">Visite Aqui</a>
+            </li>
 
-                <li class="card paris">
-                    <div class="img"><img src="/img/fr.jpg" alt=""></div>
-                    <p>Paris</p>
-                    <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <p>Paisagens/Cultura/Arquitetura</p>
-                    <a href="">Visite Aqui</a>
-                </li>
+        </ul>
 
-                <li class="card suica">
-                    <div class="img"><img src="/img/sc.jpg" alt=""></div>
-                    <p>Suiça</p>
-                    <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <p>Paisagens/Cultura/Arquitetura</p>
-                    <a href="">Visite Aqui</a>
-                </li>
-
-                <li class="card japao">
-                    <div class="img"><img src="/img/jp.jpg" alt=""></div>
-                    <p>Japão</p>
-                    <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <p>Paisagens/Cultura/Arquitetura</p>
-                    <a href="">Visite Aqui</a>
-                </li>
-
-            </ul>
-
-        </div>
-
+        
     </div>
 
+</div>
+
+
+<%- include('parts/footer') %>
 </body>
 </html>

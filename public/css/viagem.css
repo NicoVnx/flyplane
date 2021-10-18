@@ -8,24 +8,41 @@
 
     width: 100%;
     height: 100%;
+    min-height: 72vh;
     max-width: 1100px;
 
-    margin: 10vh 0;
+    margin: 5vh 0;
 
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: flex-start;
+
+    gap: 1vw;
 }
 
+.content-viagem .hr{
+
+    margin: 3vh 0;
+    
+
+}
+
+.content-viagem .hr.hrMain{
+
+    margin: 7vh 0;
+
+}
 
 .titleViagem{
 
-    color: rgb(41, 91, 255);
+    color: var(--color-tema);
     font-size: 22px;
     margin-top: 0;
 
 }
+
+/*--*/
 
 .cont.email{
 
@@ -39,7 +56,9 @@
     padding: 4vh 5vh;
 
     border-radius: 3px;
-    border: 1px solid black;
+    border: 1px solid var(--color-border);
+
+    margin-top: 8vh;
 
 }
 
@@ -71,13 +90,20 @@ width: 100%;
 
     width: 100%;
     border: 0;
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid rgb(92, 92, 92);
+
+}
+
+.partEmail input:focus{
+
+    border-bottom: 2px solid var(--color-tema)
 
 }
 
 .partEmail label{
     text-align: left;
 width: 100%;
+color:rgb(26, 26, 26) ;
     
 
 }
@@ -89,11 +115,19 @@ width: 100%;
 
 .erro{
 
+    
     text-align: left;
     margin: 0;
     font-size: 14px;
-    font-style: italic ;
-    color: rgb(255, 64, 64);
+    font-style: italic;
+    color: rgb(255 64 64 / 79%);
+
+}
+
+#formOneQuest .erro, #formTwoQuest .erro{
+
+    text-align: center;
+    
 
 }
 
@@ -101,6 +135,7 @@ width: 100%;
 
     transition: 0.5s;
     border: 0;
+    color: rgb(49, 49, 49);
 
 }
 
@@ -113,11 +148,37 @@ width: 100%;
 
 }
 
+/*--*/
+
+#formOneQuest{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 1150px;
+
+}
+
+.titleViagem.questViagem{
+
+    font-size: 35px;
+    margin-bottom: 3vh;
+
+}
+
 .questsOne{
 
     display: flex;
     flex-direction: column;
     align-items: center ;
+    gap: 5px;
+
+}
+
+.titleQuest{
+
+    
+    color: var(--color-tema);
 
 }
 
@@ -126,35 +187,178 @@ width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 1px solid black;
+    border: 1px solid var(--color-border);
     border-radius: 3px;
-    padding: 3vh 5vw;
+    padding: 3vh 5vw 5vh 5vw;
     box-sizing: border-box;
+    max-width: 900px;
 
 }
+
+
 
 label{
 
 width: fit-content;
+color: rgb(105, 105, 105);
 
 }
 
-label:hover{
+.cont.quest label:hover{
 
     cursor: pointer;
-    color: rgb(6, 48, 187);
+    color: rgb(59, 59, 59);
 
 }
 
-input[type=radio]{
+.cont.quest input[type=radio]{
 
     display: none;
 
 }
 
-input[type=radio]:checked + label {
-    color: rgb(41, 91, 255);
+.cont.quest input[type=radio]:checked + label {
+    color: rgb(26, 26, 26);
     
-  } 
+} 
+
+button.back{
+    transition: 0.5s;
+    border: 0;
+    color: rgb(49, 49, 49);
+
+}
+
+button.back:hover{
+    transition: 0.25s;
+    cursor: pointer;
+    color:rgb(255, 64, 64)
+
+}
+
+.buttonsNav{
+
+    width: 100%;
+    max-width: 900px;
+    padding: 0 1%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+/*--*/
+
+#formTwoQuest{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 560px;
+
+}
+
+
+.mainPerfil, .mainDest{
+
+    color: rgb(18, 62, 207);;
+    font-size: 30px;
+
+}
+
+
+.contPerfil{
+
+    max-width: 850px;
+    gap: 5vw;
+
+}
+
+.contPerfilCont{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+
+
+}
+
+.contPerfilCont p{
+
+    color: rgb(82, 82, 82);
+    text-align: left;
+    font-size: 21px;
+    width: 50%;
+
+}
+
+.contPerfilCont img{
+
+    width: 250px;
+    height: 250px;
+    background-color: black;
+
+}
+
+/*--*/
+
+.contFinal{
+
+    display: flex;
+    flex-direction: column;
+
+    border: 1px solid var(--color-border);
+    border-radius: 3px;
+
+    padding: 7vh 3vw;
+
+}
+
+.mainFinal{
+
+    font-size: 33px;
+    color: var(--color-tema);
+
+}
+
+
+.contDest{
+
+    max-width: 850px;
+    gap: 5vw;
+
+ 
+
+}
+
+.contDestCont{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+
+}
+
+.contDestCont p{
+
+    color: rgb(82, 82, 82);
+    text-align: center;
+    font-size: 21px;
+    width: 50%;
+
+}
+
+.contDestCont img{
+
+    width: 250px;
+    height: 250px;
+    background-color: black;
+
+}
 
  
