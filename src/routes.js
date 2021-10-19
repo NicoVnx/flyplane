@@ -24,10 +24,10 @@ var perfil
 
 var erroV = false
 var destinoViagem = []
-var praia = ['alagoas', 'cancun']
-var desc = ['ilhas salomão', 'Serra Leoa']
-var hist = ['roma', 'fortaleza']
-var mont = ['roraima', 'suiça']
+var praia = ['copacabana', 'cancún']
+var desc = ['ilhas salomão', 'primavera do leste']
+var hist = ['roma', 'ouro preto']
+var mont = ['roraima', 'interlaken']
 
 var checkOne = "ns"
 var checkTwo = "ns"
@@ -169,7 +169,7 @@ res.redirect("/viagem")
 })
 
 routes.post("/viagemQuestFinal", (req, res) => {
-
+console.log(destinoFinal)
   if(!req.body.oneF || typeof req.body.oneF == undefined || req.body.oneF == null || !req.body.twoF || typeof req.body.twoF == undefined || req.body.twoF == null
   || !req.body.threeF || typeof req.body.threeF == undefined || req.body.threeF == null){erroV = true}
   else{

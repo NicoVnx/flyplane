@@ -111,20 +111,18 @@
     
     </div>
     <%} else if(valida == 2) {%>
-
+<% if(perfil == 'praia'){%>
     <div class="contPerfil">
-        <h3 class="titleViagem questTwoViagem mainPerfil"><%= perfil %></h3>
+        <p class="preTitle">O seu perfil de viagem é:</p>
+        <h3 class="titleViagem questTwoViagem mainPerfil Tpraia">Praia</h3>
         <div class="contPerfilCont">
-            <img src="" alt="">
+            <img src="img/coq2.png" alt="">
             <p class="contPerfilTxt">
-                Lorem ipsum dolor sit amet consectetur 
-                adipisicing elit. 
-                Quia aliquid qui quam 
-                sapiente similique eveniet, 
-                rem dignissimos iure vitae culpa! 
-                Laudantium explicabo repellendus magnam 
-                quia ex esse 
-                aspernatur laboriosam dolorem.
+                Você é alguem sossegado que gosta de curtir a agua do mar,
+                o clima praiano e tropical se encaixam so seu perfil,
+               também gosta da natureza e prefere destinos mais 
+               tranquilos e livre do cotidiano.
+
             </p>
         </div>
     </div>
@@ -134,15 +132,13 @@
     <form action="/viagemQuestFinal" method="post" id="formTwoQuest">
     <h3 class="titleViagem questViagem questTwoViagem">Preencha o formulário para saber o seu destino!</h3>
 
-    
-
     <%if(erroV == true){%><p class="erro"><%= erroPerfil %> </p><%}%>
 <div class="cont quest">
-    <% if(perfil == 'praia'){%> 
+     
 
-    <p class="titleQuest">???</p>
-    <input type="radio" name="oneF" value="<%=praia[0]%>" id="oneQqOne"><label for="oneQqOne"> aaa</label>
-    <input type="radio" name="oneF" value="<%=praia[1]%>" id="oneQqTwo"><label for="oneQqTwo"> bbb</label>
+    <p class="titleQuest">1.Qual comida você prefere mais?</p>
+    <input type="radio" name="oneF" value="<%=praia[0]%>" id="oneQqOne"><label for="oneQqOne">Carnes e grãos</label>
+    <input type="radio" name="oneF" value="<%=praia[1]%>" id="oneQqTwo"><label for="oneQqTwo">Sopas e massas</label>
     <div class="hr"></div>
 
     <p class="titleQuest">???</p>
@@ -162,10 +158,30 @@
     <%}%>
 
     <%if( perfil == 'hist'){ %> 
+        <div class="contPerfil">
+            <p class="preTitle">O seu perfil de viagem é:</p>
+            <h3 class="titleViagem questTwoViagem mainPerfil Thist">Cidades Históricas</h3>
+            <div class="contPerfilCont">
+                <img src="img/hist.png" alt="">
+                <p class="contPerfilTxt">
+                    Você é uma pessoa crítica que ama arte e história, aprecia novas experiencias
+                    e tem prazer em conhecer novas culturas e pessoas, ainda sim, ser obervador e 
+                    ter uma opnião aguçada definem uma parte de você.
+                </p>
+            </div>
+        </div>
+    
+        <div class="hr hrMain"></div>
+    
+        <form action="/viagemQuestFinal" method="post" id="formTwoQuest">
+        <h3 class="titleViagem questViagem questTwoViagem">Preencha o formulário para saber o seu destino!</h3>
+    
+        <%if(erroV == true){%><p class="erro"><%= erroPerfil %> </p><%}%>
+    <div class="cont quest">
 
-    <p class="titleQuest">???</p>
-    <input type="radio" name="oneF" value="<%=hist[0]%>" id="oneQqOne"><label for="oneQqOne"> aaa</label>
-    <input type="radio" name="oneF" value="<%=hist[1]%>" id="oneQqTwo"><label for="oneQqTwo"> bbb</label>
+    <p class="titleQuest">1.Qual comida você prefere mais?</p>
+    <input type="radio" name="oneF" value="<%=hist[0]%>" id="oneQqOne"><label for="oneQqOne">Sopas e tortas</label>
+    <input type="radio" name="oneF" value="<%=hist[1]%>" id="oneQqTwo"><label for="oneQqTwo">Carnes e massas</label>
     <div class="hr"></div>
 
     <p class="titleQuest">???</p>
@@ -184,15 +200,40 @@
     <%}%>
 
     <%if( perfil == 'desc'){ %> 
+        <div class="contPerfil">
+            <p class="preTitle">O seu perfil de viagem é:</p>
+            <h3 class="titleViagem questTwoViagem mainPerfil Tdesc">Lugares Desconhecidas</h3>
+            <div class="contPerfilCont">
+                <img src="" alt="">
+                <p class="contPerfilTxt">
+                    Lorem ipsum dolor sit amet consectetur 
+                    adipisicing elit. 
+                    Quia aliquid qui quam 
+                    sapiente similique eveniet, 
+                    rem dignissimos iure vitae culpa! 
+                    Laudantium explicabo repellendus magnam 
+                    quia ex esse 
+                    aspernatur laboriosam dolorem.
+                </p>
+            </div>
+        </div>
+    
+        <div class="hr hrMain"></div>
+    
+        <form action="/viagemQuestFinal" method="post" id="formTwoQuest">
+        <h3 class="titleViagem questViagem questTwoViagem">Preencha o formulário para saber o seu destino!</h3>
+    
+        <%if(erroV == true){%><p class="erro"><%= erroPerfil %> </p><%}%>
+    <div class="cont quest">
 
-    <p class="titleQuest">???</p>
-    <input type="radio" name="oneF" value="<%=desc[0]%>"id="oneQqOne"><label for="oneQqOne"> aaa</label>
-    <input type="radio" name="oneF" value="<%=desc[1]%>" id="oneQqTwo"><label for="oneQqTwo"> bbb</label>
+    <p class="titleQuest">1.Qual comida você prefere mais?</p>
+    <input type="radio" name="oneF" value="<%=desc[0]%>"id="oneQqOne"><label for="oneQqOne">Queijos quentes e massas</label>
+    <input type="radio" name="oneF" value="<%=desc[1]%>" id="oneQqTwo"><label for="oneQqTwo">Queijos e grãos</label>
     <div class="hr"></div>
 
     <p class="titleQuest">???</p>
-    <input type="radio" name="twoF" value="<%=desc[1]%>" id="twoQqOne"><label for="twoQqOne"> aaa</label>
-    <input type="radio" name="twoF" value="<%=desc[0]%>" id="twoQqTwo"><label for="twoQqTwo"> bbb</label>
+    <input type="radio" name="twoF" value="<%=desc[1]%>" id="twoQqOne"><label for="twoQqOne">aaa</label>
+    <input type="radio" name="twoF" value="<%=desc[0]%>" id="twoQqTwo"><label for="twoQqTwo">bbb</label>
     <div class="hr"></div>
 
     <p class="titleQuest">???</p>
@@ -205,11 +246,36 @@
 
     <%}%>
 
-    <%if( perfil == 'mont'){ %> 
+    <%if( perfil == 'mont'){ %>
+        <div class="contPerfil">
+            <p class="preTitle">O seu perfil de viagem é:</p>
+            <h3 class="titleViagem questTwoViagem mainPerfil Tmont">Montanhas</h3>
+            <div class="contPerfilCont">
+                <img src="" alt="">
+                <p class="contPerfilTxt">
+                    Lorem ipsum dolor sit amet consectetur 
+                    adipisicing elit. 
+                    Quia aliquid qui quam 
+                    sapiente similique eveniet, 
+                    rem dignissimos iure vitae culpa! 
+                    Laudantium explicabo repellendus magnam 
+                    quia ex esse 
+                    aspernatur laboriosam dolorem.
+                </p>
+            </div>
+        </div>
+    
+        <div class="hr hrMain"></div>
+    
+        <form action="/viagemQuestFinal" method="post" id="formTwoQuest">
+        <h3 class="titleViagem questViagem questTwoViagem">Preencha o formulário para saber o seu destino!</h3>
+    
+        <%if(erroV == true){%><p class="erro"><%= erroPerfil %> </p><%}%>
+    <div class="cont quest">
 
-    <p class="titleQuest">???</p>
-    <input type="radio" name="oneF" value="<%=mont[0]%>"id="oneQqOne"><label for="oneQqOne"> aaa</label>
-    <input type="radio" name="oneF" value="<%=mont[1]%>" id="oneQqTwo"><label for="oneQqTwo"> bbb</label>
+    <p class="titleQuest">1.Qual comida você prefere mais?</p>
+    <input type="radio" name="oneF" value="<%=mont[0]%>"id="oneQqOne"><label for="oneQqOne">Peixes e sopas</label>
+    <input type="radio" name="oneF" value="<%=mont[1]%>" id="oneQqTwo"><label for="oneQqTwo">Queijos quentes e massas</label>
     <div class="hr"></div>
 
     <p class="titleQuest">???</p>
@@ -227,6 +293,7 @@
 
     <%}%>
 </div>
+
     </form>
 
     <div class="buttonsNav">
@@ -237,42 +304,242 @@
 
     <%} else if(valida == 3){  %>
        <h3 class="titleViagem questTwoViagem mainFinal">Parabéns! Questionário concluído</h3> 
-<div class="contFinal">
-    
+      
+       <%if(perfil == 'praia'){%>
+    <div class="contFinal">
+        
+    <%if(destinoFinal == "cancún"){%> 
+        
+            <div class="contDest">
+                <p class="preTitle">O seu destino é:</p>
+                <div class="partDestTitle">
+                <h3 class="titleViagem questTwoViagem mainDest Tcancun">Cancún</h3>
+                <img src="img/mxc.png" alt="México" title="México"></div>
+                <div class="contDestCont">
+                    
+                    <p class="contDestTxt">
+                        Cancún, uma cidade mexicana situada, na costa do Mar do Caribe, 
+                        é conhecida por suas praias, seus vários resorts e sua vida noturna. Ela é composta por duas 
+                        áreas distintas: a área mais tradicional do centro da cidade, El Centro, e a Zona Hotelera, 
+                        uma longa faixa à beira-mar com grandes hotéis, casas noturnas, lojas e restaurantes. 
+                        
+                    </p>
+                </div>
+            </div>
+    <%}else{%>
+        
         <div class="contDest">
-            <h3 class="titleViagem questTwoViagem mainDest"><%= destinoFinal %></h3>
+            <p class="preTitle">O seu destino é:</p>
+            <div class="partDestTitle">
+                
+            <h3 class="titleViagem questTwoViagem mainDest Tcopacabana">Copacabana</h3> 
+            <img src="img/br.png" alt="Brasil" title="Brasil"></div>
             <div class="contDestCont">
-                <img src="" alt="">
+            
                 <p class="contDestTxt">
-                    Lorem ipsum dolor sit amet consectetur 
-                    adipisicing elit. 
-                    Quia aliquid qui quam 
-                    sapiente similique eveniet, 
-                    rem dignissimos iure vitae culpa! 
-                    Laudantium explicabo repellendus magnam 
-                    quia ex esse 
-                    aspernatur laboriosam dolorem.
+                    Famosa pela praia em forma de meia-lua, Copacabana é um dos bairros mais animados do Rio.
+                    Ela atrai moradores e turistas para atividades ininterruptas nas suas areias e no calçadão desenhado. 
+                    Entre os arranha-céus com vista para a praia, estão o hotel Copacabana Palace e o 
+                    exuberante Forte de Copacabana, que abriga um museu militar. Mais para dentro do bairro, cafés 
+                    descontraídos e bares casuais enchem as ruas sossegadas. 
                 </p>
             </div>
         </div>
-<div class="hr hrMain"></div>
-        <div class="contPerfil">
-            <h3 class="titleViagem questTwoViagem mainPerfil"><%= perfil %></h3>
+        <%}%>       
+    <div class="hr hrMain"></div>
+
+            <div class="contPerfil">
+            <p class="preTitle">O seu perfil de viagem é:</p>
+            <h3 class="titleViagem questTwoViagem mainPerfil Tpraia">Praia</h3>
             <div class="contPerfilCont">
-                <img src="" alt="">
+                <img src="img/coq2.png" alt="">
                 <p class="contPerfilTxt">
-                    Lorem ipsum dolor sit amet consectetur 
-                    adipisicing elit. 
-                    Quia aliquid qui quam 
-                    sapiente similique eveniet, 
-                    rem dignissimos iure vitae culpa! 
-                    Laudantium explicabo repellendus magnam 
-                    quia ex esse 
-                    aspernatur laboriosam dolorem.
+                    Você é alguem sossegado que gosta de curtir a agua do mar,
+                    o clima praiano e tropical se encaixam so seu perfil,
+                também gosta da natureza e prefere destinos mais 
+                tranquilos e livre do cotidiano.
+
                 </p>
             </div>
         </div>
-</div>
+    </div>
+<%}%>
+
+<%if(perfil == 'hist'){%>
+    <div class="contFinal">
+        
+    <%if(destinoFinal == "roma"){%>    
+            <div class="contDest">
+                <p class="preTitle">O seu destino é:</p>
+                <div class="partDestTitle">
+                <h3 class="titleViagem questTwoViagem mainDest Troma">Roma</h3>
+                <img src="img/italia.png" alt="Roma" title="Roma"></div>
+                <div class="contDestCont">
+                    
+                    <p class="contDestTxt">
+                        Roma, a capital da Itália, é uma cidade cosmopolita, enorme, 
+                        com quase 3.000 anos de arte, arquitetura e cultura influentes
+                         no mundo todo. Ruínas antigas como o Fórum e o Coliseu 
+                         evocam o poder do antigo Império Romano. A Cidade do Vaticano, tem a Basílica de São Pedro e os museus do Vaticano,
+                           que abrigam obras-primas como os afrescos da Capela Sistina de Michelângelo.
+                        
+                    </p>
+                </div>
+            </div>
+    <%}else{%>
+        <div class="contDest">
+            <p class="preTitle">O seu destino é:</p>
+            <div class="partDestTitle">
+                
+            <h3 class="titleViagem questTwoViagem mainDest Tcopacabana">Primavera do Leste</h3> 
+            <img src="img/br.png" alt="Brasil" title="Brasil"></div>
+            <div class="contDestCont">
+            
+                <p class="contDestTxt">
+                    A cidade de Primavera do Leste, além de ser um ícone do agronegócio, 
+                    trás duas lagoas cristalinas que atraem turistas de todo o país: A Lagoa Encantada e a Lagoa da Lua.
+                    Além de seu estado "Mato Grosso", ser coberto na maioria por floresta tropical amazónica,
+                     zonas húmidas e as planícies da savana. Nas proximidades, o Parque Nacional da Chapada dos Guimarães 
+                     possui áreas de caminhada com penhascos em arenito.
+                </p>
+            </div>
+        </div>
+        <%}%>       
+    <div class="hr hrMain"></div>
+
+    <div class="contPerfil">
+        <p class="preTitle">O seu perfil de viagem é:</p>
+        <h3 class="titleViagem questTwoViagem mainPerfil Thist">Cidades Históricas</h3>
+        <div class="contPerfilCont">
+            <img src="img/hist.png" alt="">
+            <p class="contPerfilTxt">
+               Você é uma pessoa crítica que ama arte e história, aprecia novas experiencias
+               e tem prazer em conhecer novas culturas e pessoas, ainda sim, ser obervador e 
+               ter uma opnião aguçada definem uma parte de você.
+            </p>
+        </div>
+    </div>
+    </div>
+<%}%>
+
+<%if(perfil == 'desc'){%>
+    <div class="contFinal">
+        
+    <%if(destinoFinal == "Cancún"){%>    
+            <div class="contDest">
+                <p class="preTitle">O seu destino é:</p>
+                <div class="partDestTitle">
+                <h3 class="titleViagem questTwoViagem mainDest Tcancun">Cancún</h3>
+                <img src="img/mxc.png" alt=""></div>
+                <div class="contDestCont">
+                    
+                    <p class="contDestTxt">
+                        Cancún, uma cidade mexicana situada, na costa do Mar do Caribe, 
+                        é conhecida por suas praias, seus vários resorts e sua vida noturna. Ela é composta por duas 
+                        áreas distintas: a área mais tradicional do centro da cidade, El Centro, e a Zona Hotelera, 
+                        uma longa faixa à beira-mar com grandes hotéis, casas noturnas, lojas e restaurantes. 
+                        
+                    </p>
+                </div>
+            </div>
+    <%}else{%>
+        <div class="contDest">
+            <p class="preTitle">O seu destino é:</p>
+            <div class="partDestTitle">
+                
+            <h3 class="titleViagem questTwoViagem mainDest Tcopacabana">Copacabana</h3> 
+            <img src="img/br.png" alt=""></div>
+            <div class="contDestCont">
+            
+                <p class="contDestTxt">
+                    Famosa pela praia em forma de meia-lua, Copacabana é um dos bairros mais animados do Rio.
+                    Ela atrai moradores e turistas para atividades ininterruptas nas suas areias e no calçadão desenhado. 
+                    Entre os arranha-céus com vista para a praia, estão o hotel Copacabana Palace e o 
+                    exuberante Forte de Copacabana, que abriga um museu militar. Mais para dentro do bairro, cafés 
+                    descontraídos e bares casuais enchem as ruas sossegadas. 
+                </p>
+            </div>
+        </div>
+        <%}%>       
+    <div class="hr hrMain"></div>
+
+            <div class="contPerfil">
+            <p class="preTitle">O seu perfil de viagem é:</p>
+            <h3 class="titleViagem questTwoViagem mainPerfil Tpraia">Praia</h3>
+            <div class="contPerfilCont">
+                <img src="img/coq2.png" alt="">
+                <p class="contPerfilTxt">
+                    Você é alguem sossegado que gosta de curtir a agua do mar,
+                    o clima praiano e tropical se encaixam so seu perfil,
+                também gosta da natureza e prefere destinos mais 
+                tranquilos e livre do cotidiano.
+
+                </p>
+            </div>
+        </div>
+    </div>
+<%}%>
+
+<%if(perfil == 'mont'){%>
+    <div class="contFinal">
+        
+    <%if(destinoFinal == "Cancún"){%>    
+            <div class="contDest">
+                <p class="preTitle">O seu destino é:</p>
+                <div class="partDestTitle">
+                <h3 class="titleViagem questTwoViagem mainDest Tcancun">Cancún</h3>
+                <img src="img/mxc.png" alt=""></div>
+                <div class="contDestCont">
+                    
+                    <p class="contDestTxt">
+                        Cancún, uma cidade mexicana situada, na costa do Mar do Caribe, 
+                        é conhecida por suas praias, seus vários resorts e sua vida noturna. Ela é composta por duas 
+                        áreas distintas: a área mais tradicional do centro da cidade, El Centro, e a Zona Hotelera, 
+                        uma longa faixa à beira-mar com grandes hotéis, casas noturnas, lojas e restaurantes. 
+                        
+                    </p>
+                </div>
+            </div>
+    <%}else{%>
+        <div class="contDest">
+            <p class="preTitle">O seu destino é:</p>
+            <div class="partDestTitle">
+                
+            <h3 class="titleViagem questTwoViagem mainDest Tcopacabana">Copacabana</h3> 
+            <img src="img/br.png" alt=""></div>
+            <div class="contDestCont">
+            
+                <p class="contDestTxt">
+                    Famosa pela praia em forma de meia-lua, Copacabana é um dos bairros mais animados do Rio.
+                    Ela atrai moradores e turistas para atividades ininterruptas nas suas areias e no calçadão desenhado. 
+                    Entre os arranha-céus com vista para a praia, estão o hotel Copacabana Palace e o 
+                    exuberante Forte de Copacabana, que abriga um museu militar. Mais para dentro do bairro, cafés 
+                    descontraídos e bares casuais enchem as ruas sossegadas. 
+                </p>
+            </div>
+        </div>
+        <%}%>       
+    <div class="hr hrMain"></div>
+
+            <div class="contPerfil">
+            <p class="preTitle">O seu perfil de viagem é:</p>
+            <h3 class="titleViagem questTwoViagem mainPerfil Tpraia">Praia</h3>
+            <div class="contPerfilCont">
+                <img src="img/coq2.png" alt="">
+                <p class="contPerfilTxt">
+                    Você é alguem sossegado que gosta de curtir a agua do mar,
+                    o clima praiano e tropical se encaixam so seu perfil,
+                também gosta da natureza e prefere destinos mais 
+                tranquilos e livre do cotidiano.
+
+                </p>
+            </div>
+        </div>
+    </div>
+<%}%>
+
+
+
         <div class="buttonsNav">
     <form action="/viagemRe" method="post">
     <button type="submit" class="back">Refazer Questionário</button>

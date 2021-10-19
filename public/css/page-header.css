@@ -33,8 +33,19 @@ header ul{
     align-items: center;
 }
 
-header a{
+header .img{
+
+    width: 23px;
+    height: 23px;
+    background-image: url('/img/air.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: 0.5s;
+}
+
+header ul li a{
     transition: .5s;
+    height: fit-content;
     position:relative;
 
 }
@@ -48,8 +59,15 @@ header ul li i{
 header ul li a:hover, header ul li i:hover{
 
    color:rgb(41, 91, 255) ;
-   text-shadow: -2px 2px 8px rgba(0, 0, 0, 0.158);
+   
    transition: 0.25s;
+
+}
+
+header .img:hover{
+    transition: 0.5s;
+    background-image: url('/img/airhover.png');
+    transform: rotate(-45deg)
 
 }
 

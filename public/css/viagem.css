@@ -155,13 +155,13 @@ color:rgb(26, 26, 26) ;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 1150px;
+    height: 1000px;
 
 }
 
 .titleViagem.questViagem{
 
-    font-size: 35px;
+    font-size: 28px;
     margin-bottom: 3vh;
 
 }
@@ -256,7 +256,7 @@ button.back:hover{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 560px;
+    height: 470px;
 
 }
 
@@ -264,10 +264,46 @@ button.back:hover{
 .mainPerfil, .mainDest{
 
     color: rgb(18, 62, 207);;
-    font-size: 30px;
+    font-size: 55px;
 
 }
 
+.Tpraia{
+
+    color: rgb(249, 200, 68);
+
+}
+
+.Thist{
+
+    color: rgb(63, 186, 28);
+
+}
+
+.Tdesc{
+
+    color: rgb(61, 197, 48);
+
+}
+
+.Tmont{
+
+    color: rgb(145, 94, 19);
+
+}
+
+.Tpraia, .Tdesc, .Thist, .Tmont{
+
+  
+}
+
+.preTitle{
+
+    font-size: 15px;
+    color: rgba(82, 82, 82, 0.82);
+    font-style: italic;
+
+}
 
 .contPerfil{
 
@@ -288,18 +324,18 @@ button.back:hover{
 
 .contPerfilCont p{
 
-    color: rgb(82, 82, 82);
+    color: rgb(110, 110, 110);
     text-align: left;
-    font-size: 21px;
+    font-size: 20px;
     width: 50%;
 
 }
 
 .contPerfilCont img{
 
-    width: 250px;
-    height: 250px;
-    background-color: black;
+    width: 200px;
+    height: 200px;
+    
 
 }
 
@@ -349,15 +385,50 @@ button.back:hover{
     color: rgb(82, 82, 82);
     text-align: center;
     font-size: 21px;
-    width: 50%;
+    width: 63%;
 
 }
 
-.contDestCont img{
+.partDestTitle img{
 
-    width: 250px;
-    height: 250px;
-    background-color: black;
+    
+    width: 10%;
+    height: 10%;
+
+}
+.partDestTitle h3{
+
+    margin: 0;
+
+}
+
+.partDestTitle{
+
+    height: fit-content;
+    gap: 1vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 2vh;
+
+}
+
+.Tcancun{
+
+    color: rgb(0, 104, 71);
+
+}
+
+.Tcopacabana{
+
+    color: rgb(0, 155, 58);
+
+}
+
+.Troma{
+
+color: rgb(207, 39, 52);
 
 }
 
