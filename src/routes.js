@@ -27,7 +27,7 @@ var destinoViagem = []
 var praia = ['copacabana', 'cancún']
 var desc = ['ilhas salomão', 'primavera do leste']
 var hist = ['roma', 'ouro preto']
-var mont = ['roraima', 'interlaken']
+var mont = ['amajari', 'interlaken']
 
 var checkOne = "ns"
 var checkTwo = "ns"

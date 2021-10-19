@@ -282,7 +282,7 @@ button.back:hover{
 
 .Tdesc{
 
-    color: rgb(61, 197, 48);
+    color: rgb(24, 48, 103);
 
 }
 
@@ -292,10 +292,7 @@ button.back:hover{
 
 }
 
-.Tpraia, .Tdesc, .Thist, .Tmont{
 
-  
-}
 
 .preTitle{
 
@@ -336,6 +333,13 @@ button.back:hover{
     width: 200px;
     height: 200px;
     
+
+}
+
+.contPerfilCont img.imgMont{
+
+    width: 250px;
+    height: 250px;
 
 }
 
@@ -429,6 +433,12 @@ button.back:hover{
 .Troma{
 
 color: rgb(207, 39, 52);
+
+}
+
+.Tinter{
+
+    color:rgb(254, 0, 0)
 
 }
 
