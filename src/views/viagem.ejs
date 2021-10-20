@@ -116,7 +116,7 @@
         <p class="preTitle">O seu perfil de viagem é:</p>
         <h3 class="titleViagem questTwoViagem mainPerfil Tpraia">Praia</h3>
         <div class="contPerfilCont">
-            <img src="img/coq2.png" alt="">
+            <img src="img/praia.png" alt="">
             <p class="contPerfilTxt">
                 Você é alguem sossegado que gosta de curtir a agua do mar,
                 o clima praiano e tropical se encaixam so seu perfil,
@@ -141,14 +141,14 @@
     <input type="radio" name="oneF" value="<%=praia[1]%>" id="oneQqTwo"><label for="oneQqTwo">Sopas e massas</label>
     <div class="hr"></div>
 
-    <p class="titleQuest">???</p>
-    <input type="radio" name="twoF" value="<%=praia[1]%>" id="twoQqOne"><label for="twoQqOne"> aaa</label>
-    <input type="radio" name="twoF" value="<%=praia[0]%>" id="twoQqTwo"><label for="twoQqTwo"> bbb</label>
+    <p class="titleQuest">2.Você fala mais de um idioma? </p>
+    <input type="radio" name="twoF" value="<%=praia[1]%>" id="twoQqOne"><label for="twoQqOne"> Sim, eu falo</label>
+    <input type="radio" name="twoF" value="<%=praia[0]%>" id="twoQqTwo"><label for="twoQqTwo"> Não falo</label>
     <div class="hr"></div>
 
-    <p class="titleQuest">???</p>
-    <input type="radio" name="threeF" value="<%=praia[0]%>" id="threeQqOne"><label for="threeQqOne"> aaa</label>
-    <input type="radio" name="threeF" value="<%=praia[1]%>" id="threeQqTwo"><label for="threeQqTwo"> bbb</label>
+    <p class="titleQuest">3. Você tem disponibilidade financeira e de horário para tratar questões burocráticas como passaportes e vistos?</p>
+    <input type="radio" name="threeF" value="<%=praia[0]%>" id="threeQqOne"><label for="threeQqOne"> Não possuo disponibilidade</label>
+    <input type="radio" name="threeF" value="<%=praia[1]%>" id="threeQqTwo"><label for="threeQqTwo"> Sim, eu possuo disponibilidade</label>
 
 
     
@@ -184,14 +184,14 @@
     <input type="radio" name="oneF" value="<%=hist[1]%>" id="oneQqTwo"><label for="oneQqTwo">Carnes e massas</label>
     <div class="hr"></div>
 
-    <p class="titleQuest">???</p>
-    <input type="radio" name="twoF" value="<%=hist[1]%>" id="twoQqOne"><label for="twoQqOne"> aaa</label>
-    <input type="radio" name="twoF" value="<%=hist[0]%>" id="twoQqTwo"><label for="twoQqTwo"> bbb</label>
+    <p class="titleQuest">2.Você fala mais de um idioma?</p>
+    <input type="radio" name="twoF" value="<%=hist[1]%>" id="twoQqOne"><label for="twoQqOne"> Não falo</label>
+    <input type="radio" name="twoF" value="<%=hist[0]%>" id="twoQqTwo"><label for="twoQqTwo"> Sim, eu falo</label>
     <div class="hr"></div>
 
-    <p class="titleQuest">???</p>
-    <input type="radio" name="threeF" value="<%=hist[1]%>" id="threeQqOne"><label for="threeQqOne"> aaa</label>
-    <input type="radio" name="threeF" value="<%=hist[0]%>" id="threeQqTwo"><label for="threeQqTwo"> bbb</label>
+    <p class="titleQuest">3. Você tem disponibilidade financeira e de horário para tratar questões burocráticas como passaportes e vistos?</p>
+    <input type="radio" name="threeF" value="<%=hist[1]%>" id="threeQqOne"><label for="threeQqOne"> Não possuo disponibilidade</label>
+    <input type="radio" name="threeF" value="<%=hist[0]%>" id="threeQqTwo"><label for="threeQqTwo"> Sim, eu possuo disponibilidade</label>
 
 
     
@@ -202,11 +202,15 @@
     <%if( perfil == 'desc'){ %> 
         <div class="contPerfil">
             <p class="preTitle">O seu perfil de viagem é:</p>
-            <h3 class="titleViagem questTwoViagem mainPerfil Tdesc">Lugares Desconhecidas</h3>
+            <h3 class="titleViagem questTwoViagem mainPerfil Tdesc">Lugares Desconhecidos</h3>
             <div class="contPerfilCont">
                 <img class="imgMont" src="img/desc.png" alt="">
                 <p class="contPerfilTxt">
-                    desc
+                    Você é alguem que gosta de sair dos padrões, gosta de experiencias novas 
+                    e de sair da zona de conforto,
+                    e pra tudo isso sua coragem e espirito de aventureiro o acompanham, 
+                    efrentando e se adimirando por novos custumes
+                    e culturas.
             </div>
         </div>
     
@@ -223,14 +227,14 @@
     <input type="radio" name="oneF" value="<%=desc[1]%>" id="oneQqTwo"><label for="oneQqTwo">Queijos e grãos</label>
     <div class="hr"></div>
 
-    <p class="titleQuest">???</p>
-    <input type="radio" name="twoF" value="<%=desc[1]%>" id="twoQqOne"><label for="twoQqOne">aaa</label>
-    <input type="radio" name="twoF" value="<%=desc[0]%>" id="twoQqTwo"><label for="twoQqTwo">bbb</label>
+    <p class="titleQuest">2.Você fala mais de um idioma?</p>
+    <input type="radio" name="twoF" value="<%=desc[1]%>" id="twoQqOne"><label for="twoQqOne">Não falo</label>
+    <input type="radio" name="twoF" value="<%=desc[0]%>" id="twoQqTwo"><label for="twoQqTwo">Sim, eu falo</label>
     <div class="hr"></div>
 
-    <p class="titleQuest">???</p>
-    <input type="radio" name="threeF" value="<%=desc[1]%>" id="threeQqOne"><label for="threeQqOne"> aaa</label>
-    <input type="radio" name="threeF" value="<%=desc[0]%>" id="threeQqTwo"><label for="threeQqTwo"> bbb</label>
+    <p class="titleQuest">3. Você tem disponibilidade financeira e de horário para tratar questões burocráticas como passaportes e vistos?</p>
+    <input type="radio" name="threeF" value="<%=desc[1]%>" id="threeQqOne"><label for="threeQqOne"> Não possuo disponibilidade</label>
+    <input type="radio" name="threeF" value="<%=desc[0]%>" id="threeQqTwo"><label for="threeQqTwo"> Sim, eu possuo disponibilidade</label>
 
 
     
@@ -265,14 +269,14 @@
     <input type="radio" name="oneF" value="<%=mont[1]%>" id="oneQqTwo"><label for="oneQqTwo">Queijos quentes e massas</label>
     <div class="hr"></div>
 
-    <p class="titleQuest">???</p>
-    <input type="radio" name="twoF" value="<%=mont[1]%>" id="twoQqOne"><label for="twoQqOne"> aaa</label>
-    <input type="radio" name="twoF" value="<%=mont[0]%>" id="twoQqTwo"><label for="twoQqTwo"> bbb</label>
+    <p class="titleQuest">2.Você fala mais de um idioma?</p>
+    <input type="radio" name="twoF" value="<%=mont[1]%>" id="twoQqOne"><label for="twoQqOne"> Sim, eu falo</label>
+    <input type="radio" name="twoF" value="<%=mont[0]%>" id="twoQqTwo"><label for="twoQqTwo"> Não falo</label>
     <div class="hr"></div>
 
-    <p class="titleQuest">???</p>
-    <input type="radio" name="threeF" value="<%=mont[1]%>" id="threeQqOne"><label for="threeQqOne"> aaa</label>
-    <input type="radio" name="threeF" value="<%=mont[0]%>" id="threeQqTwo"><label for="threeQqTwo"> bbb</label>
+    <p class="titleQuest">3. Você tem disponibilidade financeira e de horário para tratar questões burocráticas como passaportes e vistos?</p>
+    <input type="radio" name="threeF" value="<%=mont[1]%>" id="threeQqOne"><label for="threeQqOne"> Sim, eu possuo disponibilidade</label>
+    <input type="radio" name="threeF" value="<%=mont[0]%>" id="threeQqTwo"><label for="threeQqTwo"> Não possuo disponibilidade</label>
 
 
     
@@ -339,7 +343,7 @@
             <p class="preTitle">O seu perfil de viagem é:</p>
             <h3 class="titleViagem questTwoViagem mainPerfil Tpraia">Praia</h3>
             <div class="contPerfilCont">
-                <img src="img/coq2.png" alt="">
+                <img src="img/praia.png" alt="">
                 <p class="contPerfilTxt">
                     Você é alguem sossegado que gosta de curtir a agua do mar,
                     o clima praiano e tropical se encaixam so seu perfil,
@@ -378,16 +382,16 @@
             <p class="preTitle">O seu destino é:</p>
             <div class="partDestTitle">
                 
-            <h3 class="titleViagem questTwoViagem mainDest Tcopacabana">Primavera do Leste</h3> 
+            <h3 class="titleViagem questTwoViagem mainDest Tcopacabana">Ouro Preto</h3> 
             <img src="img/br.png" alt="Brasil" title="Brasil"></div>
             <div class="contDestCont">
             
                 <p class="contDestTxt">
-                    A cidade de Primavera do Leste, além de ser um ícone do agronegócio, 
-                    trás duas lagoas cristalinas que atraem turistas de todo o país: A Lagoa Encantada e a Lagoa da Lua.
-                    Além de seu estado "Mato Grosso", ser coberto na maioria por floresta tropical amazónica,
-                     zonas húmidas e as planícies da savana. Nas proximidades, o Parque Nacional da Chapada dos Guimarães 
-                     possui áreas de caminhada com penhascos em arenito.
+                    Ouro Preto é uma cidade colonial na Serra do Espinhaço, na zona leste do Brasil. 
+                    É conhecida pela arquitetura barroca, que inclui pontes, fontes e praças, e pelas 
+                    ruas calcetadas íngremes e sinuosas. A Praça central de Tiradentes recebeu o nome 
+                    do mártir da independência brasileira. Existem várias igrejas e capelas por toda a cidade,
+                     incluindo a Igreja de São Francisco de Assis, do século XVIII.
                 </p>
             </div>
         </div>
@@ -460,11 +464,15 @@
 
     <div class="contPerfil">
         <p class="preTitle">O seu perfil de viagem é:</p>
-        <h3 class="titleViagem questTwoViagem mainPerfil Tdesc">Lugares Desconhecidas</h3>
+        <h3 class="titleViagem questTwoViagem mainPerfil Tdesc">Lugares Desconhecidos</h3>
         <div class="contPerfilCont">
             <img class="imgMont" src="img/desc.png" alt="">
             <p class="contPerfilTxt">
-                desc
+                Você é alguem que gosta de sair dos padrões, gosta de experiencias novas 
+                    e de sair da zona de conforto,
+                    e pra tudo isso sua coragem e espirito de aventureiro o acompanham, 
+                    efrentando e se adimirando por novos custumes
+                    e culturas.
             </p>
         </div>
     </div>

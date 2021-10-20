@@ -22,6 +22,8 @@ var perfilViagem = []
 var destinoFinal
 var perfil
 
+var emailPerfil
+
 var erroV = false
 var destinoViagem = []
 var praia = ['copacabana', 'cancún']
@@ -37,13 +39,18 @@ var checkFive = "ns"
 
 routes.get("/", (req, res) => {
 
-    
-    res.render(views + "home", {})
+  if(req.session.email){
+    emailPerfil = req.session.email } 
+    res.render(views + "home", {emailPerfil, valida})
 })
 
-routes.get("/sobre", (req, res) => res.render(views + "sobre", {}))
+routes.get("/sobre", (req, res) => {res.render(views + "sobre", {emailPerfil, valida})
+if(req.session.email){
+  emailPerfil = req.session.email } })
 
-routes.get("/destinos", (req, res) => res.render(views + "destinos", {}))
+routes.get("/destinos", (req, res) => {res.render(views + "destinos", {emailPerfil, valida})
+if(req.session.email){
+  emailPerfil = req.session.email } })
 
 
 
@@ -52,11 +59,13 @@ routes.get("/viagem", (req, res) => {
   if(perfilViagem.length >= 1){for(var i = 0; i = perfilViagem.length; i++){perfilViagem.shift()}}
   if(destinoViagem.length >= 1){for(var i = 0; i = destinoViagem.length; i++){destinoViagem.shift()}}
   
-    
+  if(req.session.email){
+  emailPerfil = req.session.email } 
+
   console.log("V " + valida)
 checkOne = 
   res.render(views + "viagem", {sucesso, erro, erroV, valida, erroPerfil, perfil, praia, desc, hist, mont, destinoFinal,
-    checkOne, checkTwo, checkThree, checkFour, checkFive})
+    checkOne, checkTwo, checkThree, checkFour, checkFive, emailPerfil})
   erroV = false
 
 })

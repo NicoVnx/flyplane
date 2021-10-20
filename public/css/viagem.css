@@ -328,21 +328,6 @@ button.back:hover{
 
 }
 
-.contPerfilCont img{
-
-    width: 200px;
-    height: 200px;
-    
-
-}
-
-.contPerfilCont img.imgMont{
-
-    width: 250px;
-    height: 250px;
-
-}
-
 /*--*/
 
 .contFinal{
@@ -393,13 +378,7 @@ button.back:hover{
 
 }
 
-.partDestTitle img{
 
-    
-    width: 10%;
-    height: 10%;
-
-}
 .partDestTitle h3{
 
     margin: 0;

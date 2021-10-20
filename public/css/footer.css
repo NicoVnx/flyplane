@@ -22,6 +22,14 @@ footer{
 
 }
 
+.navCont{
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
 footer i,footer p {
 
     font-weight: 400;
@@ -39,7 +47,7 @@ footer ul li a{
 
 footer #navFooter{
 
-    width: 70%;
+    width: 33%;
     margin: 0 auto;
     box-sizing: border-box;
 
@@ -52,25 +60,28 @@ footer nav ul{
     width: 100%;
     padding: 0;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    gap: 7px;
 
 }
 
 .sociais{
 
+    display: flex; 
+    flex-direction: column;
+    gap: 7px;
     margin: 0 auto;
-    width: 50%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    width: 33%;
+    
    
 }
 
-.sociais i{
 
-    margin-right: 0px;
-    font-size: 35px;
+
+.sociais a{
+
+    width: fit-content;
 
 }
 
@@ -88,6 +99,14 @@ footer nav ul{
     font-style: italic;
 
 }
+
+.thx{
+
+    width: 33%;
+
+}
+
+
 
 @media (max-width: 460px){
 
