@@ -44,8 +44,6 @@
 <%if(erroV == true){%><p class="erro"><%= erroPerfil %> </p><%}%>
     <div class="cont quest">
 
-     
-
     
     <p class="titleQuest">1.Qual sua prioridade na hora de montar um roteiro de viagem?</p>
 
@@ -104,12 +102,14 @@
     </div>
 
     </form>
-
-    <div class="buttonsNav">
+<div class="buttonsNav">
         <form action="/viagemBack" method="post"><button type="submit" class="back">Mudar Email</button></form>
     <button type="submit" class="submit" form="formOneQuest">Avançar</button>
     
     </div>
+    
+
+
     <%} else if(valida == 2) {%>
 <% if(perfil == 'praia'){%>
     <div class="contPerfil">

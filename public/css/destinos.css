@@ -28,7 +28,7 @@ gap: 5vh;
 
 .navGuia p{
 
-    color: rgb(109, 109, 109);
+    color: var(--color-sub);
     font-size: 14px;
     width: 20%;
 
@@ -100,7 +100,7 @@ gap: 3vh;
     
     height: 100%;
     font-size: 17px;
-    color: rgb(58, 58, 58);
+    color: var(--color-txttwo);
     display: flex;
     justify-content: center;
     align-items: center;

@@ -52,6 +52,7 @@
     width: fit-content;
     height: 100%;
     margin: 0 0 5vh 0;
+    color: var(--color-txtheader);
     
    
 }
@@ -174,7 +175,7 @@ height: 234px;
 
 .cont-card p{
 
-    color: white;
+    color: var(--color-txtone);
     
     font-size: 15px;
 
@@ -239,7 +240,7 @@ p.sub.footer{
 }
 
 .viagemHomeTxt p {
-    color: rgb(59, 59, 59);
+    color: var(--color-txttwo);
     font-size: 23px;
     letter-spacing: .8px;
 }
@@ -248,7 +249,7 @@ p.sub.footer{
 
     font-size: 15px;
     padding: 17px;
-    color: white;
+    color: var(--color-txtone);
     border-radius: 12px;
     width: fit-content;
     background-color: rgb(108, 59, 255);
@@ -278,7 +279,7 @@ p.sub.footer{
     
 }
 .sobreHomeTxt p {
-color: rgb(59, 59, 59);
+color: var(--color-txttwo);
     letter-spacing: .8px;
     width: 100%;
     font-size: 23px;

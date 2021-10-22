@@ -8,7 +8,7 @@
 
 body{
 
-    background-color:rgba(225, 232, 255, 0.664);
+    background-color:var(--bg);
 
 
 
@@ -49,24 +49,30 @@ ul, li, a, i, p, h1, h2, h3, nav, header{
 
 html{
 
-    --bg: rgb(255, 253, 242);
+    --bg: rgb(225, 232, 255);
     --color-txtheader: black;
     --color-tema: rgb(41, 91, 255);
-    --color-sub: rgb(90, 90, 90);
-    --color-txtone: rgb(70, 70, 70);
-    --color-txttwo: rgb(54, 54, 54);
-
-    --color-txthomedest: #574a36;
+    --color-sub: rgb(131, 131, 131);
+    --color-txtone: white;
+    --color-txttwo: rgb(59, 59, 59);
 
     --color-border: rgb(124, 124, 124);
+    --color-bordertwo: rgb(92, 92, 92);
 
-    --color-temacontato: #ff515a;
-    --color-temapages: #f09941;
+    --color-shadow: rgba(0, 0, 0, 0.164);
+
+    --label-n: rgb(131, 131, 131);
+    --label-h: rgb(59, 59, 59);
+    --label-c: rgb(26, 26, 26);
+
+   --pre-title: rgba(82, 82, 82, 0.82);
 
     --bg-footer: rgb(34, 34, 34);
     --footer-txt: white;
 
-    --bg-hamb: rgb(222,219,211)
+    --bg-hamb: rgb(222,219,211);
+
+    --urlImg: url('/img/air.png');
 
 }
 
@@ -107,7 +113,7 @@ ul, li{
 ul li a, i, li a, p, a, select{
 
     text-decoration: none;
-    color: black;
+    color: var(--color-txtheader);
 
 }
 
@@ -134,7 +140,7 @@ input:focus, select:focus{
 
  .sub{
 
-    color: rgb(131, 131, 131);
+    color: var(--color-sub);
     
     font-weight: 400;
     font-size: 19px;

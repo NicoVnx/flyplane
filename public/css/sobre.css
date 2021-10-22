@@ -43,7 +43,7 @@ margin: 0;
 
 .content-sobre p{
 
-    color: rgb(36, 36, 36);
+    color: var(--color-txttwo);
     font-size: 24px;
     
 

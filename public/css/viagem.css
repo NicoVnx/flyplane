@@ -90,7 +90,7 @@ width: 100%;
 
     width: 100%;
     border: 0;
-    border-bottom: 2px solid rgb(92, 92, 92);
+    border-bottom: 2px solid var(--color-bordertwo);
 
 }
 
@@ -103,7 +103,7 @@ width: 100%;
 .partEmail label{
     text-align: left;
 width: 100%;
-color:rgb(26, 26, 26) ;
+color:var(--color-txttwo) ;
     
 
 }
@@ -135,7 +135,7 @@ color:rgb(26, 26, 26) ;
 
     transition: 0.5s;
     border: 0;
-    color: rgb(49, 49, 49);
+    color: var(--color-txttwo);
 
 }
 
@@ -150,12 +150,19 @@ color:rgb(26, 26, 26) ;
 
 /*--*/
 
+input#email{
+
+    color: var(--color-txtheader);
+
+}
+
 #formOneQuest{
 
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 1000px;
+    height: fit-content;
+    /*min-height: 1120px;*/
 
 }
 
@@ -200,14 +207,20 @@ color:rgb(26, 26, 26) ;
 label{
 
 width: fit-content;
-color: rgb(105, 105, 105);
+color: var(--color-sub);
+
+}
+
+.cont.quest label{
+
+    color: var(--label-n)
 
 }
 
 .cont.quest label:hover{
 
     cursor: pointer;
-    color: rgb(59, 59, 59);
+    color: var(--label-h);
 
 }
 
@@ -218,14 +231,14 @@ color: rgb(105, 105, 105);
 }
 
 .cont.quest input[type=radio]:checked + label {
-    color: rgb(26, 26, 26);
+    color: var(--label-c);
     
 } 
 
 button.back{
     transition: 0.5s;
     border: 0;
-    color: rgb(49, 49, 49);
+    color: var(--color-txttwo);
 
 }
 
@@ -256,7 +269,7 @@ button.back:hover{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 470px;
+    height: fit-content;
 
 }
 
@@ -297,7 +310,7 @@ button.back:hover{
 .preTitle{
 
     font-size: 15px;
-    color: rgba(82, 82, 82, 0.82);
+    color: var(--pre-title);
     font-style: italic;
 
 }
@@ -321,7 +334,7 @@ button.back:hover{
 
 .contPerfilCont p{
 
-    color: rgb(110, 110, 110);
+    color: var(--color-txttwo);
     text-align: left;
     font-size: 20px;
     width: 50%;
@@ -371,7 +384,7 @@ button.back:hover{
 
 .contDestCont p{
 
-    color: rgb(82, 82, 82);
+    color: var(--color-txttwo);
     text-align: center;
     font-size: 21px;
     width: 63%;
