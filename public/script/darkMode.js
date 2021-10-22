@@ -12,6 +12,8 @@ const imgIg = document.getElementById("imgIg")
 const imgCrist = document.getElementById("imgCrist")
 const imgBust = document.getElementById("imgBust")
 
+const imgDark = document.getElementById("imgDark")
+
 const btn = document.getElementById("switch")
 
 const getStyle = (element, style) => window.getComputedStyle(element).getPropertyValue(style)
@@ -92,8 +94,14 @@ checkbox.addEventListener("change", ({target}) => {
     target.checked ? imgGit.src = "img/git.png" : imgGit.src = "img/gitw.png"
     target.checked ? imgIg.src = "img/insta.png" : imgIg.src = "img/instaw.png"
 
+    target.checked ? imgDark.src = "/img/moon.png" : imgDark.src = "/img/sun.png"
+
+    //target.checked ? darkLabel.src = "img/moon.png" : darkLabel.src = "img/sun.png"
+
     target.checked ? imgCrist.src = "img/cristw.png" : imgCrist.src = "img/crist.png"
     target.checked ? imgBust.src = "img/bustw.png" : imgBust.src = "img/bust.png"
+
+    
    
 })
 
@@ -124,23 +132,33 @@ if(Cookies.get('dark')){
     checkbox.checked = true
     changeColors(darkMode)
 
+    imgDark.src = "/img/moon.png"
     imgI.style.backgroundImage = "url('/img/airw.png')"
     imgFb.src = "img/fb.png"
     imgGit.src = "img/git.png"
     imgIg.src = "img/insta.png"
+
+    //darkLabel.src = "img/moon.png"
 
     imgCrist.src = "img/cristw.png"
     imgBust.src = "img/bustw.png"
 
     
 
-}else{
+    
 
+}else{
+    imgDark.src = "/img/sun.png"
     imgFb.src = "img/fbw.png"
     imgGit.src = "img/gitw.png"
     imgIg.src = "img/instaw.png"
 
+    //darkLabel.src = "img/sun.png"
+
     imgCrist.src = "img/crist.png"
     imgBust.src = "img/bust.png"
+
+    
+   
 
 }
