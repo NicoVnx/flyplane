@@ -2,11 +2,7 @@
 
 
     <header class="">
-        <div class="phone">
-            
-<button id="btnHamb">O</button>
-
-</div>
+       
             <nav class="container header">
 
                 
@@ -17,27 +13,37 @@
                     
 
                 </ul>
-                <%if(valida == 1 || valida == 2 || valida == 3){%>
+                
+                <div class="contDrop">
+                    
+                    <button id="btnHamb"><img id="imgHamb" src="img/hamb.png" alt="" ></button>
+                    <div class="drop">
+                        <%if(valida == 1 || valida == 2 || valida == 3){%>
+                        <div class="logado">
+                        <img src="img/user.png" alt="" title="logado">
+                        <p class="emailPerfil"><%= emailPerfil %></p>
+                        </div>
+                        <%}%>
 
-                    <div class="logado">
-                <img src="img/user.png" alt="" title="Logado">
-                <p class="emailPerfil"><%= emailPerfil %></p>
-</div>
-                <%}%>
-
-                <ul id="ulfilha">
+                        <ul id="ulfilha">
 
                     <li><a href="/destinos"> Destinos </a></li>
                     <li><a href="/sobre"> Sobre </a></li>
                     <li id="imp"><a href="/viagem"> Viagem </a></li>
                         
-                </ul>
+                        </ul>
+                        
+                    </div>   
+                
+                    </div>
+                
                 <div class="toggle">
                 <input id="switch" type="checkbox" name="theme">
                 
                 <label class="sw" for="switch"><img id="imgDark" src="img/sub.png" alt="" title="darkmode"></label>
-        </div>
+                </div>
             </nav>
+                    
 
             <script src="script/btnHamb.js"></script>
 

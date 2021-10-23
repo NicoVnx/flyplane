@@ -14,6 +14,8 @@ const imgBust = document.getElementById("imgBust")
 
 const imgDark = document.getElementById("imgDark")
 
+const imgHamb = document.getElementById("imgHamb")
+
 const btn = document.getElementById("switch")
 
 const getStyle = (element, style) => window.getComputedStyle(element).getPropertyValue(style)
@@ -101,6 +103,8 @@ checkbox.addEventListener("change", ({target}) => {
     target.checked ? imgCrist.src = "img/cristw.png" : imgCrist.src = "img/crist.png"
     target.checked ? imgBust.src = "img/bustw.png" : imgBust.src = "img/bust.png"
 
+    target.checked ? imgHamb.src = "img/hambw.png" : imgHamb.src = "img/hamb.png"
+
     
    
 })
@@ -137,7 +141,7 @@ if(Cookies.get('dark')){
     imgFb.src = "img/fb.png"
     imgGit.src = "img/git.png"
     imgIg.src = "img/insta.png"
-
+    imgHamb.src = "img/hambw.png"
     //darkLabel.src = "img/moon.png"
 
     imgCrist.src = "img/cristw.png"
@@ -152,7 +156,7 @@ if(Cookies.get('dark')){
     imgFb.src = "img/fbw.png"
     imgGit.src = "img/gitw.png"
     imgIg.src = "img/instaw.png"
-
+    imgHamb.src = "img/hamb.png"
     //darkLabel.src = "img/sun.png"
 
     imgCrist.src = "img/crist.png"
