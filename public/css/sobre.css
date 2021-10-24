@@ -17,7 +17,7 @@ max-width: 1000px;
     min-height: 72vh;
     margin: 10vh auto;
 
-    
+    padding: 0 5vw;
     border-radius: 20px;
     
 }
@@ -48,3 +48,46 @@ margin: 0;
     
 
 }
+
+@media (max-width: 1040px){
+
+    .content-sobre{
+
+        margin: 7vh auto;
+
+    }
+
+        .content-sobre h2{
+    
+            font-size: 45px;
+            
+        
+        }
+        
+        .content-sobre p{
+    
+            font-size: 20px;
+            
+        
+        }
+    
+    
+}
+    @media (max-width: 690px){
+    
+       
+
+        .content-sobre h2{
+    
+            font-size: 35px;
+            
+        
+        }
+        
+        .content-sobre p{
+    
+            font-size: 19px;
+            
+        
+        }
+    }

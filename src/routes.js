@@ -1,6 +1,8 @@
 import express from "express"
 import  { User }  from "./models/Users.js"
 import session from "express-session"
+import { sendMail } from "../public/script/sendMail.js"
+
 
 const routes = express.Router()
 const views = "C:/Users/nicov/code/flyplane/src" + "/views/"
@@ -93,6 +95,9 @@ routes.post("/viagemEmail", (req, res) =>{
       res.redirect("/viagem")
 
     }).catch(()=>{ 
+
+      //sendMail(req.body.email)
+
       console.log('não existe ' + req.session.email)
     new User({
 

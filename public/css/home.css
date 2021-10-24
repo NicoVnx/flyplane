@@ -5,7 +5,7 @@
     
     flex-direction: column;
     justify-content: flex-start;
-    padding: 80px;
+    padding: 5vw;
     box-sizing: border-box;
     
 }
@@ -107,15 +107,8 @@ nav.nav-cards{
     flex-direction: column;
     justify-content: flex-end;
     overflow:hidden;
-
+    background-position: center;
     box-shadow: -6px 6px 17px rgba(0, 0, 0, 0.356);
-
-}
-
-.card.end{
-
-    width: 100%;
-    height: 100%;
 
 }
 
@@ -137,6 +130,7 @@ nav.nav-cards{
     gap: .5vh;
     display: flex;
     background-color: rgba(0, 0, 0, 0.363);
+    height: 52%;
     backdrop-filter: blur(3px);
     border-radius: 20px 20px 0 0;
     padding: 1% 7% 7% 7%;
@@ -150,22 +144,10 @@ nav.nav-cards{
 
 }
 
-.end .cont-card.hide{
-
-    margin-bottom: -180px;
-
-}
-
-.end .cont-card{
-
-height: 234px;
-
-}
-
 
 .cont-card.hide{
 
-    margin-bottom: -190px;
+    margin-bottom: -215px;
     transition: .7s margin-bottom, .7s overflow;
 
 }
@@ -188,6 +170,13 @@ p.sub.footer{
 .cont-card img{
 
     width: 30%;
+
+}
+
+.cont-card .desc{
+
+    padding: 1vw;
+    margin: 0;
 
 }
 
@@ -286,5 +275,204 @@ color: var(--color-txttwo);
 
 }
 
+
+
+@media (max-width: 1040px){
+
+    .container.home .sub.one {
+        font-size: 18px;
+    }
+    .container.home h2{
+
+font-size: 55px;
+
+    }
+
+    .viagemHomeTxt a, .sobreHomeTxt a{
+
+font-size: 16px;
+    }
+
+    .sobreHomeTxt p, .viagemHomeTxt p{
+
+        font-size: 18px;
+
+    }
+
+    .sub.esp{
+
+        font-size: 16px;
+
+    }
+
+    .cont-card p{
+
+        
+        font-size: 15px;
+}
+}
+
+@media (max-width: 810px){
+
+    .container.home .sub.one {
+        font-size: 17px;
+    }
+    .container.home h2{
+
+font-size: 45px;
+
+    }
+
+    .viagemHomeTxt a, .sobreHomeTxt a{
+
+font-size: 15px;
+
+    }
+
+    .sobreHomeTxt p, .viagemHomeTxt p{
+        font-size: 17px;
+        
+    }
+
+    .viagemHome img, .sobreHome img{
+
+        width: 160px;
+        height: 160px;
+            }
+
+    .sub.esp{
+
+        font-size: 15px;
+
+    }
+
+    .cont-card p{
+
+        
+        font-size: 14px;
+}
+}
+
+@media (max-width: 690px){
+
+    .container.home h2 {
+        font-size: 40px;
+    }
+    .cont-card p{
+
+        
+        font-size: 12px;
+}
+}
+
+
+
+@media (max-width: 560px){
+
+    .container.home h2 {
+        font-size: 32px;
+    }
+   
+
+}
+
+@media (max-width: 680px){
+
+    .sobreHomeTxt , .viagemHomeTxt {
+        width: 80%;
+        align-items: center;
+        
+    }
+
+   .sobreHomeTxt p, .viagemHomeTxt p{
+    text-align: center;
+    
+}
+
+.viagemHome img, .sobreHome img{
+
+    width: 160px;
+    height: 160px;
+        }
+
+        .viagemHome{
+
+           flex-direction: column;
+           
+                }.sobreHome{
+
+                    flex-direction: column-reverse;
+                         }
+   
+
+}
+
+
+
+/*--Recomendados--*/
+
+@media (max-width: 1040px){
+
+.cont-card{
+
+    height: 62%;
+
+}
+
+.cont-card.hide{
+
+    margin-bottom: -210px;
+
+}
+
+    .click{
+
+        height: 420px;
+
+    }
+
+}
+
+@media (max-width: 980px){
+    .cont-card{
+
+        height: 58%;
+    
+    }
+    
+    .cont-card.hide{
+    
+        margin-bottom: -195px;
+    
+    }
+  .click.sc{
+
+    display: none;
+
+  }
+
+ 
+}   
+
+@media (max-width: 680px){
+
+    .cont-card{
+
+        height: 68%;
+
+    }
+    .cont-card.hide{
+
+        margin-bottom: -180px;
+    
+    }
+    .click{
+  
+      height: 320px;
+  
+    }
+  
+   
+  }  
 
 

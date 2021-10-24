@@ -1,9 +1,9 @@
 footer{
 
     background-color: var(--bg-footer);
-    height: 160px;
-    max-height: 160px;
-    padding: 30px 0;
+    height: fit-content;
+    padding: 30px;
+    box-sizing: border-box;
     width: 100vw;
     max-width: 100%;
     bottom: 0;
@@ -18,6 +18,7 @@ footer{
     height: 100%;
     display: flex;
     flex-direction: column;
+    gap: 3vh;
     justify-content: space-between;
 
 }
@@ -102,13 +103,12 @@ footer nav ul{
 
 .thx{
 
+    text-align: center;
     width: 33%;
 
 }
 
-
-
-@media (max-width: 460px){
+@media (max-width: 900px){
 
     footer nav ul{
 
@@ -117,9 +117,27 @@ footer nav ul{
 
     }
 
-    footer{
+    footer .thx p{
 
-        padding: 15px 0
+        font-size: 15px;
+
+    }
+
+    footer nav ul li a{
+
+        font-size: 14px;
+
+    }
+
+}
+
+
+@media (max-width: 500px){
+
+
+    footer .thx p{
+
+        font-size: 14px;
 
     }
 

@@ -97,13 +97,13 @@ checkbox.addEventListener("change", ({target}) => {
     target.checked ? imgIg.src = "img/insta.png" : imgIg.src = "img/instaw.png"
 
     target.checked ? imgDark.src = "/img/moon.png" : imgDark.src = "/img/sun.png"
-
+target.checked ? imgHamb.src = "img/hambw.png" : imgHamb.src = "img/hamb.png"
     //target.checked ? darkLabel.src = "img/moon.png" : darkLabel.src = "img/sun.png"
 
     target.checked ? imgCrist.src = "img/cristw.png" : imgCrist.src = "img/crist.png"
     target.checked ? imgBust.src = "img/bustw.png" : imgBust.src = "img/bust.png"
 
-    target.checked ? imgHamb.src = "img/hambw.png" : imgHamb.src = "img/hamb.png"
+    
 
     
    

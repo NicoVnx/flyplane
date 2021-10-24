@@ -1,6 +1,6 @@
 header{
 
-    width: 100vw;
+    width: 100%;
     height: 80px;
     transition: box-shadow 0.7s, height 0.7s;
     position: fixed;
@@ -204,7 +204,7 @@ header.dropdown + header.dropdown .container .drop{
         display: flex;
         flex-direction: column;
     
-        
+        align-items: center;
         box-sizing: border-box;
         
         transition:0.7s;
@@ -253,12 +253,6 @@ header.dropdown + header.dropdown .container .drop{
         max-width:680px;
 
     }
-   
-   
-
-
-
-
 
     #ulfilha{
 
@@ -276,16 +270,42 @@ header.dropdown + header.dropdown .container .drop{
     }
 
     
-    
 
     header.dropdown + .container{
         transition: height 0.7s ;
+        box-sizing: border-box;
         height: 100vh;
         overflow: hidden;
 
     }
     
 
+}
+
+@media (max-width: 1040px){
+    .logado p{
+
+        font-size: 12px;
+    }
+
+    header a{
+
+        font-size: 14px;
+
+    }
+}
+
+@media (max-width: 810px){
+    .logado p{
+
+        font-size: 11px;
+    }
+
+    header a{
+
+        font-size: 13px;
+
+    }
 }
 
 /*label.sw {

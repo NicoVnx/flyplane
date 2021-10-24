@@ -7,15 +7,14 @@
 }
 
 .content-dest{
-width: 100%;
-max-width: 950px;
-
-margin: 10vh auto;
-
-display: flex;
-flex-direction: column;
-gap: 5vh;
-
+    width: 100%;
+    max-width: 950px;
+    margin: 10vh auto;
+    display: flex;
+    flex-direction: column;
+    gap: 5vh;
+    padding: 0 ;
+    box-sizing: border-box;
 }
 
 .navGuia{
@@ -95,6 +94,7 @@ gap: 3vh;
 
 }
 
+
 .card p{
 
     
@@ -109,9 +109,12 @@ gap: 3vh;
 
 }
 
-.card p.categoria{
+.card .contCat{
 
     width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
 }
 
@@ -145,5 +148,144 @@ gap: 3vh;
     width: 20%;
     display: flex;
     align-items: center;
+
+}
+
+@media (max-width: 1040px){
+
+.content-dest{
+
+    padding: 0 5vw;
+
+}
+
+    .title-dest h2{
+
+        font-size: 45px;
+        
+    
+    }
+    
+    .title-dest p.sub.one{
+    
+       
+        font-size: 15px;
+    
+    }
+
+    .card img.star{
+
+        width: 50%;
+    
+    }
+
+    .card p{
+
+    
+        font-size: 15px;
+        
+    
+    
+    }
+
+    .navGuia p {
+        
+        font-size: 13px;
+        
+    }
+
+    .card p.categoria {
+        font-size: 15px;
+    }
+
+    .card a.sub {
+        font-size: 13px;
+    }
+
+    
+}
+
+
+
+@media (max-width: 690px){
+
+    .partTitleCard{
+
+        flex-direction: column;
+
+    }
+
+    .content-dest{
+
+        margin: 7vh auto;
+    
+    }
+
+    .title-dest h2{
+
+        font-size: 40px;
+        
+    
+    }
+    
+    .title-dest p.sub.one{
+    
+       
+        font-size: 13px;
+    
+    }
+
+    .card img.star{
+
+        width: 50%;
+    
+    }
+
+    .card p{
+
+    
+        font-size: 13px;
+        
+    
+    
+    }
+
+    .navGuia p {
+        
+        font-size: 12px;
+        
+    }
+
+    .card p.categoria {
+        font-size: 13px;
+    }
+
+    .card a.sub {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 720px){
+
+    
+    .contCat{
+
+        flex-direction: column;
+        gap: 5px;
+
+
+    }
+
+    .contCat p{
+
+        margin: 0;
+
+    }
+
+    .contCat .div{
+
+        display: none;
+
+    }
 
 }

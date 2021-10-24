@@ -17,7 +17,7 @@
     align-items: center;
     flex-direction: column;
     justify-content: flex-start;
-
+padding: 0 5vw;
     gap: 1vw;
 }
 
@@ -49,10 +49,10 @@
    display: flex;
    flex-direction: column;
    width: 100%;
-   max-width: 500px;
+   max-width: 600px;
 
     gap: 30px;
-
+box-sizing: border-box;
     padding: 4vh 5vh;
 
     border-radius: 3px;
@@ -434,4 +434,175 @@ color: rgb(207, 39, 52);
 
 }
 
- 
+@media (max-width: 1040px){
+
+    .titleViagem{
+
+        font-size: 20px; 
+    }
+    .partEmail label{
+
+        font-size: 15px; 
+
+    }
+    input#email {
+
+        font-size: 15px;
+
+    }
+
+    .erro{
+
+        font-size: 12px;
+
+    }
+    .titleViagem.questViagem {
+        font-size: 23px;
+        
+    }
+
+    .mainPerfil, .mainDest {
+        
+        font-size: 40px;
+    }
+
+    .preTitle {
+        font-size: 13px;
+        
+    }
+
+    .contPerfilCont p, .contDestCont p {
+        
+        font-size: 18px;
+        
+    }
+
+    .mainFinal {
+        font-size: 28px;
+        
+    }
+
+    .back, .submit{
+
+        font-size: 16px;
+
+    }
+}
+
+@media (max-width: 810px){
+    .titleViagem{
+
+        font-size: 17px; 
+    }
+    .partEmail label{
+
+        font-size: 13px; 
+
+    }
+    input#email {
+
+        font-size: 13px;
+
+    }
+    .erro{
+
+        font-size: 11px;
+
+    }
+    .titleViagem.questViagem {
+        font-size: 20px;
+        
+    }
+
+    .mainPerfil, .mainDest {
+        
+        font-size: 32px;
+    }
+
+    .preTitle {
+        font-size: 12px;
+        
+    }
+
+    .contPerfilCont p, .contDestCont p {
+        
+        font-size: 16px;
+        
+    }
+
+    .mainFinal {
+        font-size: 25px;
+        
+    }
+
+    .back, .submit{
+
+        font-size: 15px;
+
+    }
+
+    img.imgPerfil{
+
+        width: 160px;
+        height: 160px;
+
+    }
+
+}
+
+@media (max-width: 620px){
+
+    .titleViagem{
+
+        font-size: 15px; 
+    }
+    .partEmail label{
+
+        font-size: 12px; 
+
+    }
+    input#email {
+
+        font-size: 12px;
+
+    }
+    .erro{
+
+        font-size: 10px;
+
+    }
+    .contPerfilCont, .partDestTitle{
+
+        flex-direction: column;
+
+    }
+   
+    .mainPerfil, .mainDest {
+        
+        font-size: 28px;
+    }
+
+    img.imgPerfil{
+
+        width: 130px;
+        height: 130px;
+
+    }
+
+    .contPerfilCont p, .contDestCont p {
+        width: 80%;
+        text-align: center;
+    }
+
+    .mainFinal {
+        font-size: 20px;
+        
+    }
+
+    .back, .submit{
+
+        font-size: 14px;
+
+    }
+
+}
