@@ -1,7 +1,7 @@
 import express from "express"
 import  { User }  from "./models/Users.js"
 import session from "express-session"
-import { sendMail } from "../public/script/sendMail.js"
+//import { sendMail } from "../public/script/sendMail.js"
 
 
 const routes = express.Router()

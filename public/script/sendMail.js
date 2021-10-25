@@ -1,6 +1,6 @@
 export const sendMail = function(email){
 
-  
+   import nodemailer from "nodemailer";
 
   var remetente = nodemailer.createTransport({
 
