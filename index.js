@@ -20,7 +20,7 @@ console.log("Houve um erro ao se conectar: " + erro)
 })
 
 
-server.use(express.static("public"))
+server.use(express.static(__dirname + '/public'))
 
 
 server.use(express.urlencoded({ extended: true }))
